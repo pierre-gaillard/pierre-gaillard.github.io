@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Pierre Gaillard</title>
+<!-- Bootstrap Core CSS -->
+<link href="home/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="home/css/simple-sidebar.css" rel="stylesheet">
+<link href="home/css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<!-- header -- sidebar -->
+    <div class="col-sm-3 col-lg-2">
+      <nav class="navbar navbar-default navbar-fixed-side">
+        <!-- normal collapsible navbar markup -->
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://pierre.gaillard.me/index.html">
+            Pierre Gaillard</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myNav">
+            <p class="text-center hidden-xs"><a href="index.html"><img src="http://pierre.gaillard.me/home/img/pierre_gaillard.png" alt="Pierre" class="img-polaroid" width="150" height="150"/></a></p>
+            <ul class="nav navbar-nav">
+              <li><a href="http://pierre.gaillard.me/research.html">Research</a></li>
+              <li><a href="http://pierre.gaillard.me/teaching.html">Teaching</a></li>
+              <li><a href="http://pierre.gaillard.me/resume.html">Resume</a></li>
+              <li><a href="http://pierre.gaillard.me/opera.html">Opera</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+<div class="col-sm-9 col-lg-10" id="content">
+
+<h1>Opera
+<span style="float:right;"><img src="home/img/opera/logo_opera.jpg" alt="opera logo" width="200"/></span>
+</h1>
+<hr>
+
+<br/>  
+
+<div class="row">
+	<div class="col-sm-4  col-md-4 col-lg-4">
+		<i class="fa fa-envelope fa-fw"></i> Contact<br/>
+		<p><script>
+		            document.write("<n uers=\"znvygb:cvreer.tnvyyneq@vaevn.se\" ery=\"absbyybj\">cvreer.tnvyyneq@vaevn.se</n>".replace(/[a-zA-Z]/g,
+		              function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+		              </script></p>     
+	</div>
+
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<i class="fa fa-cloud" aria-hidden="true"></i> <a href="https://cran.r-project.org/web/packages/opera/index.html">CRAN</a>
+		<br/>
+		<i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com/Dralliag/opera">GitHub</a>
+	</div>
+
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<i class="fa fa-book" aria-hidden="true"></i> <a href="https://cran.r-project.org/web/packages/opera/opera.pdf">Documentation</a>
+		<br/>
+		<i class="fa fa-download" aria-hidden="true"></i> <a href="https://cran.r-project.org/src/contrib/opera_1.0.tar.gz">Download</a>
+	</div>
+</div>
+
+<p><code>opera</code> is an R package that provides several algorithms to perform robust online prediction of time series with the help of expert advice. In this vignette, we provide an example of how to use the package.</p>
+<div id="setting-when-is-the-package-opera-useful" class="section level2">
+<h2>Setting: when is the package <code>opera</code> useful?</h2>
+<p>Consider a sequence of real bounded observations <span class="math inline">\(y_1,\dots,y_n\)</span> to be predicted step by step. Suppose that you have at your disposal a finite set of methods <span class="math inline">\(k =1,\dots,K\)</span> (henceforth referred to as experts) that provide you before each time step <span class="math inline">\(t=1,\dots,n\)</span> predictions <span class="math inline">\(x_{k,t}\)</span> of the next observation <span class="math inline">\(y_t\)</span>. You can form your prediction <span class="math inline">\(\widehat y_t\)</span> by using only the knowledge of the past observations <span class="math inline">\(y_1,\dots,y_{t-1}\)</span> and past and current expert forecasts <span class="math inline">\(x_{k,1},\dots,x_{k,t}\)</span> for <span class="math inline">\(k=1,\dots,K\)</span>. The package <a href=#>opera</a> implements several algorithms of the online learning literature that form predictions <span class="math inline">\(\widehat y_t\)</span> by combining the expert forecasts according to their past performance. That is, <span class="math display">\[
+  \widehat y_t = \sum_{k=1}^K p_{k,t} x_{k,t} \,.
+\]</span> These algorithms come with finite time worst-case guarantees. The monograph of <a href="https://ii.uni.wroc.pl/~lukstafi/pmwiki/uploads/AGT/Prediction_Learning_and_Games.pdf">Cesa-Bianchi and Lugisi (2006)</a> gives a complete introduction to the setting of prediction of arbitrary sequences with the help of expert advice.</p>
+<div id="what-are-the-most-important-functions" class="section level3">
+<h3>What are the most important functions?</h3>
+<p>The package <code>opera</code> provides three important functions: <code>mixture</code> to build the algorithm object, <code>predict</code> to make a prediction by using the algorithm, and <code>oracle</code> to evaluate the performance of the experts and compare the performance of the combining algorithm.</p>
+</div>
+</div>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<p>opera is now available on CRAN, so you can install it with:</p>
+<pre class="r"><code>install.packages(&quot;opera&quot;)</code></pre>
+<p>You can also install the development version of opera with the package devtools:</p>
+<pre class="r"><code>install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;dralliag/opera&quot;)</code></pre>
+<p>You may be asked to install additional necessary packages. You can install the package vignette by setting the option: build_vignettes = TRUE.</p>
+</div>
+<div id="example-predict-the-weekly-electricity-consumption." class="section level2">
+<h2>Example: predict the weekly electricity consumption.</h2>
+<p>Here, we provide a concrete example on how to use the package. To do so, we consider an electricity forecasting data set that includes weekly observations of the French electric load together with several covariates: the temperature, calendar information, and industrial production indexes. The data set is provided by the French <a href="https://www.insee.fr/fr/accueil">National Institute of Statistics and Economic Studies (Insee)</a>.</p>
+<div id="the-data-set" class="section level3">
+<h3>The data set</h3>
+<p>First, we load the data and we cut it into two subsets: a training set used to build the experts (base forecasting methods) and a testing set (here the last two years) used to evaluate the performance and to run the combining algorithms.</p>
+<pre class="r"><code>data(electric_load)
+attach(electric_load)
+idx_data_test &lt;- 620:nrow(electric_load)
+data_train &lt;- electric_load[-idx_data_test, ] 
+data_test &lt;- electric_load[idx_data_test, ]  </code></pre>
+<p>The data is displayed in the following figures.</p>
+<pre class="r"><code>plot(Load, type = &quot;l&quot;, main = &quot;The electric Load&quot;)</code></pre>
+<p align="center">
+<img src="home/img/opera/Load-1.png" width="432" style="display: block; margin: auto;" />
+</p>
+<pre class="r"><code>plot(Temp, Load, pch = 16, cex = 0.5, main = &quot;Temperature vs Load&quot;)</code></pre>
+<p align="center">
+<img src="home/img/opera/Temp-1.png" width="432" style="display: block; margin: auto;" />
+</p>
+<pre class="r"><code>plot(NumWeek, Load, pch = 16, cex = 0.5, main = &quot;Annual seasonality&quot;)</code></pre>
+<p align="center">
+<img src="home/img/opera/NumWeek-1.png" width="432" style="display: block; margin: auto;" />
+</p>
+</div>
+<div id="first-build-the-expert-forecasts" class="section level3">
+<h3>First: build the expert forecasts</h3>
+<p>Here, we build three base forecasting methods to be combined later.</p>
+<ul>
+<li>A generalized additive model using the <code>mgcv</code> package:</li>
+</ul>
+<pre class="r"><code>library(mgcv)
+gam.fit &lt;- gam(Load ~ s(IPI) + s(Temp) + s(Time, k=3) + 
+                 s(Load1) + as.factor(NumWeek), data = data_train)
+gam.forecast &lt;- predict(gam.fit, newdata = data_test)</code></pre>
+<ul>
+<li>A medium term generalized additive model followed by an autoregressive short-term correction.</li>
+</ul>
+<pre class="r"><code># medium term model
+medium.fit &lt;- gam(Load ~ s(Time,k=3) + s(NumWeek) + s(Temp) + s(IPI), data = data_train)
+electric_load$Medium &lt;- c(predict(medium.fit), predict(medium.fit, newdata = data_test))
+electric_load$Residuals &lt;- electric_load$Load - electric_load$Medium
+
+# autoregressive correction
+ar.forecast &lt;- numeric(length(idx_data_test))
+for (i in seq(idx_data_test)) {
+  ar.fit &lt;- ar(electric_load$Residuals[1:(idx_data_test[i] - 1)])
+  ar.forecast[i] &lt;- as.numeric(predict(ar.fit)$pred) + electric_load$Medium[idx_data_test[i]]
+}</code></pre>
+<ul>
+<li>A gradient boosting model using <code>caret</code> package</li>
+</ul>
+<pre class="r"><code>library(caret)
+gbm.fit &lt;- train(Load ~ IPI + IPI_CVS + Temp + Temp1 + Time + Load1 + NumWeek, data = data_train, method = &quot;gbm&quot;)
+gbm.forecast &lt;- predict(gbm.fit, newdata = data_test)</code></pre>
+<p>Once the expert forecasts have been created (note that they can also be formed online), we build the matrix of expert and the time series to be predicted online</p>
+<pre class="r"><code>Y &lt;- data_test$Load
+X &lt;- cbind(gam.forecast, ar.forecast, gbm.forecast)
+matplot(cbind(Y, X), type = &quot;l&quot;, col = 1:6, ylab = &quot;Weekly load&quot;, 
+        xlab = &quot;Week&quot;, main = &quot;Expert forecasts and observations&quot;)</code></pre>
+<p align="center">
+<img src="home/img/opera/loadAndForecasts-1.png" width="432" style="display: block; margin: auto;" />
+</p>
+</div>
+<div id="how-good-are-the-experts-look-at-the-oracles" class="section level3">
+<h3>How good are the experts? Look at the oracles</h3>
+<p>To evaluate the performance of the experts and see if the aggregation rules may perform well, you can look at the oracles (rules that are used only for analysis and cannot be design online).</p>
+<pre class="r"><code>oracle.convex &lt;- oracle(Y = Y, experts = X, loss.type = &quot;square&quot;, model = &quot;convex&quot;)
+print(oracle.convex)
+plot(oracle.convex)</code></pre>
+<p align="center">
+<pre><code>#&gt; Call:
+#&gt; oracle.default(Y = Y, experts = X, model = &quot;convex&quot;, loss.type = &quot;square&quot;)
+#&gt; 
+#&gt; Coefficients:
+#&gt;    gam    ar    gbm
+#&gt;  0.719 0.201 0.0799
+#&gt; 
+#&gt;                       rmse   mape
+#&gt; Best expert oracle:   1480 0.0202
+#&gt; Uniform combination:  1560 0.0198
+#&gt; Best convex oracle:   1440 0.0193</code></pre>
+<img src="home/img/opera/oracle-1.png" width="432" style="display: block; margin: auto;" />
+</p>
+<p>The parameter <code>loss.type</code> defines the evaluation criterion. It can be either the square loss, the percentage loss, the absolute loss, or the pinball loss to perform quantile regression.</p>
+<p>The parameter <code>model</code> defines the oracle to be calculated. Here, we computed the best fixed convex combination of expert (i.e., with non-negative weights that sum to one).</p>
+</div>
+	<div id="aggregate-the-experts-online-using-one-of-the-possible-aggregation-procedures" class="section level3">
+	<h3>Aggregate the experts online using one of the possible aggregation procedures</h3>
+	<p>The first step consists in initializing the algorithm by defining the type of algorithm (Ridge regression, exponentially weighted average forecaster,…), the possible parameters, and the evaluation criterion. If no parameter is defined by the user, all parameters will be calibrated online by the algorithm. Bellow, we define the ML-Poly algorithm, evaluated by the square loss.</p>
+	<pre class="r"><code>MLpol0 &lt;- mixture(model = &quot;MLpol&quot;, loss.type = &quot;square&quot;)</code></pre>
+	<p>Then, you can perform online predictions by using the <code>predict</code> method. At each time, step the aggregation rule forms a new prediction and update the procedure.</p>
+	<pre class="r"><code>MLpol &lt;- MLpol0
+	for (i in 1:length(Y)) {
+	  MLpol &lt;- predict(MLpol, newexperts = X[i, ], newY = Y[i])
+	}</code></pre>
+	<p>The results can be displayed with method <code>summary</code> and <code>plot</code>.</p>
+	<pre class="r"><code>summary(MLpol)
+	#&gt; Aggregation rule: MLpol 
+	#&gt; Loss function:  square loss 
+	#&gt; Gradient trick:  TRUE 
+	#&gt; Coefficients: 
+	#&gt;    gam    ar gbm
+	#&gt;  0.577 0.423   0
+	#&gt; 
+	#&gt; Number of experts:  3
+	#&gt; Number of observations:  112
+	#&gt; Dimension of the data:  1 
+	#&gt; 
+	#&gt;         rmse   mape
+	#&gt; MLpol   1460 0.0192
+	#&gt; Uniform 1560 0.0198</code></pre>
+	<pre class="r"><code>plot(MLpol, pause = TRUE)</code></pre>
+	<p><center><img src="home/img/opera/MLpol-1.png" alt="" style="max-width:350px"><img src="home/img/opera/MLpol-2.png" alt="" style="max-width:350px"><img src="home/img/opera/MLpol-3.png" alt="" style="max-width:350px"><img src="home/img/opera/MLpol-4.png" alt="" style="max-width:350px"><img src="home/img/opera/MLpol-5.png" alt="" style="max-width:350px"><img src="home/img/opera/MLpol-6.png" alt="" style="max-width:350px"></center></p>
+	<p>The same results can be obtained more directly:</p>
+	<ul>
+	<li>by giving the whole time series to <code>predict</code> specifying <code>online = TRUE</code> to perform online prediction.</li>
+	</ul>
+	<pre class="r"><code>MLpol &lt;- predict(MLpol0, newexpert = X, newY = Y, online = TRUE)</code></pre>
+	<ul>
+	<li>or directly to the function mixture, when building the aggregation rule</li>
+	</ul>
+	<pre class="r"><code>MLpol &lt;- mixture(Y = Y, experts = X, model = &quot;MLpol&quot;, loss.type = &quot;square&quot;)</code></pre>
+	</div>
+	<div id="about-the-predictions" class="section level3">
+		<h3>About the predictions</h3>
+		<p>The vector of predictions formed by the mixture can be obtained through the output prediction.</p>
+		<pre class="r"><code>predictions &lt;- MLpol$prediction</code></pre>
+		<p>Note that these predictions were obtained sequentially by the algorithm by updating the model coefficients after each data. It is worth to emphasize that each observation is used to get the prediction of the next observations but not itself (nor past observations).</p>
+		<p>In real-world situations, predictions should be produced without having access to the observed outputs. There are several solutions to get them with <code>opera</code>.</p>
+		<p>Using the <code>predict</code> method with the arguments * <code>online = FALSE</code>: the model coefficients are not updated during the prediction. * <code>type = response</code>: the predictions are returned and not an updated model.</p>
+		<pre class="r"><code>newexperts &lt;- X[1:3, ] # Experts forecasts to predict 3 new points  
+		pred &lt;- predict(MLpol, newexperts = newexperts, online = FALSE, type = &#39;response&#39;)</code></pre>
+		<pre><code>#&gt; [1] 64397.10 61317.41 63571.59</code></pre>
+		<p>The same result can be easily obtained by using the last model coefficients to perform the weighted average of the expert advice.</p>
+		<pre class="r"><code>pred = newexperts %*% MLpol$coefficients</code></pre>
+		<pre><code>#&gt; [1] 64397.10 61317.41 63571.59</code></pre>
+	</div>
+	<div id="block-by-block-predictions" class="section level3">
+		<h3>Block by block predictions</h3>
+		<p>In some situations, the aggregation model cannot be updated at each step due to an operational constraint. One must predict the time-series <span class="math inline">\(y_1,\dots,y_n\)</span> block by block. For example, a weather website might want to make a daily forecast of the next day’s temperature at hourly intervals. This corresponds to block by block predictions of 24 observations.</p>
+		<p>Let’s say that in the above example, instead of making a weekly prediction, we need to predict every four weeks, the consumption of the next four weeks. Below we show two different ways to use the <code>opera</code> package to do this.</p>
+		<div id="using-d-dimensional-time-series" class="section level4">
+		<h4>Using d-dimensional time-series</h4>
+		<p>Note that the outputs <span class="math inline">\(y_1,\dots,y_n\)</span> to be predicted step by step can be <span class="math inline">\(d\)</span>-dimensional in <code>opera</code>. In this case, the argument <code>Y</code> provided to the function <code>mixture</code> should be a matrix, where each line corresponds to the output observed at time <span class="math inline">\(t\)</span>; the argument <code>experts</code> must be an array of dimension <span class="math inline">\(T \times d \times K\)</span> such that <code>experts[t,:,k]</code> is the prediction made by expert <span class="math inline">\(k\)</span> at iteration <span class="math inline">\(t\)</span>. These predictions of dimension <span class="math inline">\(d\)</span> can be used in various situations. For example, we might want to simultaneously predict the electricity consumption of several countries in the example above.</p>
+		<p>Another useful application of this feature is block by block prediction. Consider the above exemple of electricity consumption to be predicted every four weeks. This can be easily done by transforming the original time series into a 4 dimensional time series, where each row corresponds to the four weeks to predict after each update.</p>
+		<pre class="r"><code>YBlock &lt;- seriesToBlock(X = Y, d = 4)
+		XBlock &lt;- seriesToBlock(X = X, d = 4)</code></pre>
+		<p>The four-week-by-four-week predictions can then be obtained by directly using the <code>mixture</code> function as we did earlier.</p>
+		<pre class="r"><code>MLpolBlock &lt;- mixture(Y = YBlock, experts = XBlock, model = &quot;MLpol&quot;, loss.type = &quot;square&quot;)</code></pre>
+		<p>The predictions can finally be transformed back to a regular one dimensional time-series by using the function <code>blockToSeries</code>.</p>
+		<pre class="r"><code>prediction &lt;- blockToSeries(MLpolBlock$prediction)</code></pre>
+	</div>
+	<div id="using-the-online-false-option" class="section level4">
+		<h4>Using the <code>online = FALSE</code> option</h4>
+		<p>Another equivalent solution is to use the <code>online = FALSE</code> option in the predict function. The latter ensures that the model coefficients are not updated between the next four weeks to forecast.</p>
+		<pre class="r"><code>MLpolBlock &lt;- MLpol0
+		d = 4
+		n &lt;- length(Y)/d
+		for (i in 0:(n-1)) { 
+		  idx &lt;- 4*i + 1:4 # next four weeks to be predicted
+		  MLpolBlock &lt;- predict(MLpolBlock, newexperts = X[idx, ], newY = Y[idx], online = FALSE)
+		}</code></pre>
+		<p>As we see below, the coefficients are updated every four lines only.</p>
+		<pre><code>#&gt;           [,1]      [,2]      [,3]
+		#&gt; [1,] 0.3333333 0.3333333 0.3333333
+		#&gt; [2,] 0.3333333 0.3333333 0.3333333
+		#&gt; [3,] 0.3333333 0.3333333 0.3333333
+		#&gt; [4,] 0.3333333 0.3333333 0.3333333
+		#&gt; [5,] 0.1437215 0.0000000 0.8562785
+		#&gt; [6,] 0.1437215 0.0000000 0.8562785</code></pre>
+	</div>
+</div>
+</div>
+<div id="meta" class="section level1">
+<h1>Meta</h1>
+<ul>
+<li>Please <a href="https://github.com/dralliag/opera">report any issues or bugs</a>.</li>
+<li>License: LGPL</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- js scripts here
+// note jquery tag has to go before boostrap -->
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+$(document).ready(function() {
+$('[data-toggle=offcanvas]').click(function() {
+$('.row-offcanvas').toggleClass('active');
+});
+});
+</script>
+<script src="https://use.fontawesome.com/9f2e7c29fc.js"></script>
+
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<!-- HTML comment box -->
+<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24nhrJ%2FghZ7rRlYMXljgu%2FV%2F"+"&opts=16862&num=10&ts=1470938497865");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+
+<!-- For latex with Mathjax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+});
+</script>
+<script type="text/javascript" async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</body>
+
+</html>
