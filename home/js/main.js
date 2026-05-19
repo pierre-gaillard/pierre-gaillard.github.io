@@ -1,61 +1,29 @@
-// // ZeroClipboard.config({swfPath: "javascripts/zeroclipboard/dist/ZeroClipboard.swf"});  $(document).ready(function() {
+// Copy to clipboard using the native Clipboard API (replaces the old Flash-based ZeroClipboard)
+function copyToClipboard(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text).then(function() {
+      console.log('Copied to clipboard:', text);
+    }).catch(function(err) {
+      console.error('Clipboard write failed:', err);
+    });
+  }
+  // Fallback for older browsers
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  try { document.execCommand('copy'); } catch(e) { console.error('Fallback copy failed:', e); }
+  document.body.removeChild(ta);
+}
 
-$(document).ready(function() {
-
-  var clip = new ZeroClipboard($("#target-to-copy"), {
-      moviePath: "home/js/zeroclipboard/ZeroClipboard.swf",
-      debug: false
-  });
-
-  clip.on("ready", function() {
-    debugstr("Flash movie loaded and ready.");
-
-    this.on("aftercopy", function(event) {
-      debugstr("Copied text to clipboard: " + event.data["text/plain"]);
+// Attach to any element with data-copy attribute
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('[data-copy]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      copyToClipboard(el.getAttribute('data-copy'));
     });
   });
-
-  clip.on("error", function(event) {
-    $(".demo-area").hide();
-    debugstr('error[name="' + event.name + '"]: ' + event.message);
-    ZeroClipboard.destroy();
-  });
-
-  // jquery stuff (optional)
-  function debugstr(text) {
-    $("#d_debug").append($("<p>").text(text));
-  }
-
 });
-
-// $("textarea").keydown(function(e) {
-//     if(e.keyCode === 9) { // tab was pressed
-//         // get caret position/selection
-//         var start = this.selectionStart;
-//         var end = this.selectionEnd;
-//         var $this = $(this);
-//         var value = $this.val();
-//         // set textarea value to: text before caret + tab + text after caret
-//         $this.val(value.substring(0, start)
-//                     + "\t"
-//                     + value.substring(end));
-//         // put caret at right position again (add one for the tab)
-//         this.selectionStart = this.selectionEnd = start + 1;
-//         // prevent the focus lose
-//         e.preventDefault();
-//     }
-// });
-
-// main.js
-var client = new ZeroClipboard( document.getElementById("copy-button") );
-
-client.on( "ready", function( readyEvent ) {
-  // alert( "ZeroClipboard SWF is ready!" );
-
-  client.on( "aftercopy", function( event ) {
-    // `this` === `client`
-    // `event.target` === the element that was clicked
-    event.target.style.display = "none";
-    alert("Copied text to clipboard: " + event.data["text/plain"] );
-  } );
-} );

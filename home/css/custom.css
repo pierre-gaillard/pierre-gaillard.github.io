@@ -3,7 +3,6 @@ blockquote {
   margin: 0 0 21px;
   font-size: 15px;
   border-left: 5px solid #ecf0f1;
-  /*line-height: 1.4;*/
 }
 blockquote footer,
 blockquote small,
@@ -14,10 +13,7 @@ blockquote .small {
   color: #b4bcc2;
 }
 a {
-  /*color: #18bc9c;*/
-  /*color: #2E86C1;*/
   color: #355681;
-  /*color: rgba(53,86,129, 0.8);*/
 }
 /*h4 {
   color: #18bc9c;
@@ -41,9 +37,6 @@ ul.info li:last-child:after {
 
 .navbar-default {
   background: #2c3e50;
-  /*background-color: #355681;*/
-  /*background-color: rgba(44,62,80, .8);*/
-  /*background-color: rgba(53,86,129, 0.8);*/
 }
 a.article:link  { color: #18bc9c; text-decoration: none; }
 
@@ -67,10 +60,7 @@ h3 {
   position: relative;
   font-size: 18px;
   line-height: 18px;
-  /*background: #2c3e50;*/
-  /*background: #355681;*/
   background: rgba(47,65,90, .9);
-  /*background: rgba(53,86,129, .9);*/
   padding: 5px 15px;
   color: white;
   border-radius: 0 10px 0 10px;
