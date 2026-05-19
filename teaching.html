@@ -13,6 +13,12 @@
   <!-- Custom CSS -->
   <link href="home/css/simple-sidebar.css" rel="stylesheet">
   <link href="home/css/custom.css" rel="stylesheet">
+  <link rel="preload" href="header.html" as="fetch" crossorigin="anonymous">
+  <style>
+  #navbar-placeholder { opacity: 0; transition: opacity 0.15s ease; }
+  #navbar-placeholder.loaded { opacity: 1; }
+  </style>
+  <link rel="shortcut icon" type="image/png" href="home/img/pierre_gaillard.png" />
 </head>
 <body>
 
@@ -26,16 +32,20 @@
   <div class="col-sm-9 col-lg-10" id="content">
 
   <h1>Teaching</h1>
-
   <hr>
+
+
+  
   <h4>2025 &ndash; 2026</h4>
   <ul>
     <li>
       <a href="https://sequential-learning.github.io/">Sequential learning</a>, Master 2 MVA, Ecole Normale Supérieure Paris-Saclay.
     </li>
   </ul>
-
   <hr>
+
+
+  
   <h4>2023 &ndash; 2025</h4>
   <ul>
     <li> 
@@ -48,37 +58,45 @@
       Online learning part of the course <a href="https://ama.liglab.fr/~amini/Cours/ML/index.html">“Mathematical foundations of machine learning”</a>, Master MOSIG and MSIAM, Master 2, Université Grenoble Alpes. <br>
     </li>
     <li>
-      <a href="">Online Convex Optimization</a>, Master 2, Sorbonne Université.
+      Online Convex Optimization, Master 2, Sorbonne Université.
     </li>
   </ul>
+  <hr>
+
 
   <h4>2022 &ndash; 2023</h4>
   <ul>
     <li> 
-      <a href="">Intelligent Systems</a>, Master 1, Université Grenoble Alpes. 
+      Intelligent Systems, Master 1, Université Grenoble Alpes. 
     </li>
     <li> 
-      <a href="">From Basic Machine Learning models to Advanced Kernel Learning</a>, Master 2, Université Grenoble Alpes. 
+      From Basic Machine Learning models to Advanced Kernel Learning, Master 2, Université Grenoble Alpes. 
     </li>
-    <li><a href="">Sequential learning</a>, Master 2 MVA, Ecole Normale Supérieure Paris-Saclay.
+    <li>Sequential learning, Master 2 MVA, Ecole Normale Supérieure Paris-Saclay.
     </li>
   </ul>
+  <hr>
+
 
 
   <h4>2021 &ndash; 2022</h4>
   <ul>
     <li> Sequential learning, Master 2 MVA, Ecole Normale Supérieure Paris-Saclay.</li>
   </ul>
+  <hr>
+
 
   <h4>2020 &ndash; 2021</h4>
   <ul>
     <li>Sequential learning, Master 2 MVA, Ecole Normale Supérieure Paris-Saclay.</li>
   </ul>
+  <hr>
+
   <h4>2019 &ndash; 2020</h4>
   <ul>
     <li> Prediction of Individual sequences, Master 2 MVA, Ecole Normale Supérieure Paris-Saclay.</li>
-  	<li><a href="https://www.di.ens.fr/appstat/spring-2020">Introduction to machine learning</a>, Licence L3, Ecole Normale Superieure (Paris), co-teached with <a href="https://www.di.ens.fr/~rudi/">Alessandro Rudi</a> and Raphaël Berthier.</li>
-    <li><a href="https://synapses.telecom-paris.fr/catalogue/2019-2020/ue/13389/IA318-apprentissage-avance-dont-apprentissage-par-renforcement">Advanced machine learning (IA318)</a>, Telecom ParisTech, co-teached with  <a href="https://perso.telecom-paristech.fr/bonald/Home_page.html">Thomas Bonald</a>, Claire Vernade, Adrien Taylor, and <a href="https://www.di.ens.fr/~rudi/">Alessandro Rudi</a>.
+  	<li><a href="https://www.di.ens.fr/appstat/spring-2020">Introduction to machine learning</a>, Licence L3, Ecole Normale Superieure (Paris), co-taught with <a href="https://www.di.ens.fr/~rudi/">Alessandro Rudi</a> and Raphaël Berthier.</li>
+    <li><a href="https://synapses.telecom-paris.fr/catalogue/2019-2020/ue/13389/IA318-apprentissage-avance-dont-apprentissage-par-renforcement">Advanced machine learning (IA318)</a>, Telecom ParisTech, co-taught with  <a href="https://perso.telecom-paristech.fr/bonald/Home_page.html">Thomas Bonald</a>, Claire Vernade, Adrien Taylor, and <a href="https://www.di.ens.fr/~rudi/">Alessandro Rudi</a>.
     <ul>
       <li>Adversarial Bandits
       </li>
@@ -87,78 +105,87 @@
     </ul>
     </li>
   </ul>
+  <hr>
+
   
   <h4>2018 &ndash; 2019</h4>
   <ul>
-  <li><a href="https://www.di.ens.fr/appstat/spring-2019">Introduction to machine learning</a>, Licence L3, Ecole Normale Superieure (Paris), co-teached with <a href="https://www.di.ens.fr/~rudi/">Alessandro Rudi</a> and Raphaël Berthier.</li>
+  <li><a href="https://www.di.ens.fr/appstat/spring-2019">Introduction to machine learning</a>, Licence L3, Ecole Normale Superieure (Paris), co-taught with <a href="https://www.di.ens.fr/~rudi/">Alessandro Rudi</a> and Raphaël Berthier.</li>
   <li> Prediction of Individual sequences, Master 2 MVA, Ecole Normale Supérieure Paris-Saclay.</li>
-  <li> <a href="https://www.di.ens.fr/appstat/fall-2018/">Introduction to machine learning</a>, Master M1, Ecole Normale Superieure (Paris), co-teached with <a href="https://www.di.ens.fr/~fbach/">Francis Bach</a> and Aude Genevay.</li>
+  <li> <a href="https://www.di.ens.fr/appstat/fall-2018/">Introduction to machine learning</a>, Master M1, Ecole Normale Superieure (Paris), co-taught with <a href="https://www.di.ens.fr/~fbach/">Francis Bach</a> and Aude Genevay.</li>
 	</ul>
+  <hr>
+
 
   <h4>2017 &ndash; 2018</h4>
   <ul>
-  	<li> <a href="https://www.di.ens.fr/appstat/fall-2017/">Introduction to machine learning</a>, Master M1, Ecole Normale Superieure (Paris), co-teached with <a href="https://www.di.ens.fr/~fbach/">Francis Bach</a> and Aude Genevay.</li>
-  	<li> <a href="https://sites.google.com/site/vianneyperchet/mva">Prediction of Individual sequences</a>, Master 2 MVA, Ecole Normale Supérieure Paris-Saclay, co-teached with <a href="https://sites.google.com/site/vianneyperchet/home">Vianney Perchet</a>.</li>
+  	<li> <a href="https://www.di.ens.fr/appstat/fall-2017/">Introduction to machine learning</a>, Master M1, Ecole Normale Superieure (Paris), co-taught with <a href="https://www.di.ens.fr/~fbach/">Francis Bach</a> and Aude Genevay.</li>
+  	<li> <a href="https://sites.google.com/site/vianneyperchet/mva">Prediction of Individual sequences</a>, Master 2 MVA, Ecole Normale Supérieure Paris-Saclay, co-taught with <a href="https://sites.google.com/site/vianneyperchet/home">Vianney Perchet</a>.</li>
   </ul>
+  <hr>
+
 
   <h4>2014 &ndash; 2015</h4>
   <ul>
-    <li> TD de probabilités-statistiques en troisième année Polytech Paris-Sud (filière ingénieur). </li>
-    <li> Cours/TD de probabilités en L3 pour les élèves ingénieurs de la license MFA de l'Université Paris-Sud. </li>
-    <li> TP de statistiques dans le cadre du Master 1 de bio-statistiques de l'Université Paris-Sud. </li>
-    <li> Arbres et forêts aléatoires, 18 novembre 2014. Intervention dans le cadre du Master 2 d'Ingénérie Mathématiques de l'Université Paris-Sud. <br/>
+    <li> Exercise sessions in probability and statistics for third-year engineering students, Polytech Paris-Sud. </li>
+    <li> Lectures and exercise sessions in probability for L3 engineering students, MFA programme, Université Paris-Sud. </li>
+    <li> Lab sessions in statistics, Master 1 in biostatistics, Université Paris-Sud. </li>
+    <li> Random forests, 18 November 2014. Guest lecture, Master 2 in Mathematical Engineering, Université Paris-Sud. <br/>
     </li>
   </ul>
+  <hr>
+
 
   <h4>2013 &ndash; 2014</h4>
  	<ul>
- 	  <li> TP de probabilités en Scilab dans le cadre de la license MFA de l'Université Paris-Sud. </li>
- 	  <li> Cours/TD de probabilités en L3 pour les élèves ingénieurs de la license MFA de l'Université Paris-Sud. </li>
- 	  <li> TP de statistiques dans le cadre du Master 1 de bio-statistiques de l'Université Paris-Sud. </li>
-    <li> Interventions dans le cadre du Master 2 d'Ingénérie Mathématiques de l'Université Paris-Sud.
+ 	  <li> Lab sessions in probability (Scilab), MFA programme, Université Paris-Sud. </li>
+ 	  <li> Lectures and exercise sessions in probability for L3 engineering students, MFA programme, Université Paris-Sud. </li>
+ 	  <li> Lab sessions in statistics, Master 1 in biostatistics, Université Paris-Sud. </li>
+    <li> Guest lectures, Master 2 in Mathematical Engineering, Université Paris-Sud.
         <ul>
           <li>
-          Arbres et forêts aléatoires, 7 janvier 2014.
+          Random forests, 7 January 2014.
             <ul class="info">
-              <li><a href="../doc/teaching/randomforests-slides-2014.pdf">Transparents</a></li>
+              <li><a href="../doc/teaching/randomforests-slides-2014.pdf">Slides</a></li>
               <li><a href="../doc/teaching/randomforests-code-2014.zip">Code R</a></li>
             </ul>
           </li>
           <li>
-            Suites individuelles, 21 janvier 2014.
+            Individual sequences, 21 January 2014.
             <ul class="info">
-              <li><a href="../doc/teaching/suitesindividuelles-slides.pdf">Transparents</a></li>  
+              <li><a href="../doc/teaching/suitesindividuelles-slides.pdf">Slides</a></li>  
               <li><a href="../doc/teaching/suitesindividuelles-code.zip">Code R</a></li>
             </ul>
           </li>
         </ul>
     </li>
  	</ul>   
+  <hr>
+
   
   <h4>2012 &ndash; 2013</h4>
  	<ul>
- 	  <li> TP de probabilités en Matlab dans le cadre de la license MFA de l'Université Paris-Sud. </li>
- 	  <li> TP de statistiques dans le cadre du Master 1 de bio-statistiques de l'Université Paris-Sud. </li>
-    <li> Interventions dans le cadre du Master 2 d'Ingénérie Mathématiques de l'Université Paris-Sud.
+ 	  <li> Lab sessions in probability (Matlab), MFA programme, Université Paris-Sud. </li>
+ 	  <li> Lab sessions in statistics, Master 1 in biostatistics, Université Paris-Sud. </li>
+    <li> Guest lectures, Master 2 in Mathematical Engineering, Université Paris-Sud.
         <ul>
           <li>
-          Arbres et forêts aléatoires, 8 janvier 2013.
-          Suites individuelles, 22 janvier 2013.
+          Random forests, 8 January 2013. Individual sequences, 22 January 2013.
           </li>
         </ul> </li>
-    <li> Encadrement d'étudiants en première année de license sur leurs projets professionnels. </li>
- 	</ul>   
-  <br/>
-  <h4>Liens utiles</h4>
-  Plusieurs liens intéressants autour des mathématiques et tutoriaux ou aide-mémoires utiles (<a href="http://detexify.kirelabs.org/classify.html">Latex</a>, <a href="http://joly415.perso.math.cnrs.fr/memento_python.pdf">Python</a>, <a href="http://stoltz.perso.math.cnrs.fr/Enseignements/TPs-Matlab/TP1.pdf">Matlab</a>, <a href="http://joly415.perso.math.cnrs.fr/memento_css.pdf">Css</a>) sont disponibles <a href="http://joly415.perso.math.cnrs.fr/Liens_utiles.htm">ici</a> sur la page d'<a href="http://joly415.perso.math.cnrs.fr/">Emilien Joly</a>, un autre doctorant de <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz</a>. 
-
-  <br/> 
-  Les commandes linux pour convertir des fichiers tex, dvi, ps, pdf, doc sont disponibles <a href="http://www.math.u-psud.fr/~ruette/formats_pdf-ps.html">ici</a> sur la page de <a href="http://www.math.u-psud.fr/~ruette">Sylvie Ruette</a>.
+    <li> Supervision of first-year undergraduate students on professional projects. </li>
+ 	</ul>
+  
   
     </div>
   </div>
 </div>
 
+  <footer class="col-sm-9 col-lg-10 col-sm-offset-3 col-lg-offset-2 site-footer">
+    &copy; Pierre Gaillard &nbsp;&middot;&nbsp;
+    <a href="mailto:pierre.gaillard@inria.fr">pierre.gaillard@inria.fr</a> &nbsp;&middot;&nbsp;
+    <a href="https://github.com/Dralliag">GitHub</a>
+  </footer>
   <!-- js scripts here
   // note jquery tag has to go before boostrap -->
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -173,20 +200,23 @@
   });
   </script>
   <script src="https://use.fontawesome.com/9f2e7c29fc.js"></script>
-
-
-
   <!-- Navbar include -->
   <script>
   fetch('header.html')
-    .then(function(r){ return r.text(); })
-    .then(function(html){
+    .then(function(r) {
+      if (!r.ok) throw new Error('header.html not found (HTTP ' + r.status + ')');
+      return r.text();
+    })
+    .then(function(html) {
       document.getElementById('navbar-placeholder').innerHTML = html;
+      document.getElementById('navbar-placeholder').classList.add('loaded');
       var page = window.location.pathname.split('/').pop() || 'index.html';
-      if (!page) page = 'index.html';
-      document.querySelectorAll('#navbar-placeholder .nav a').forEach(function(a){
+      document.querySelectorAll('#navbar-placeholder .nav a').forEach(function(a) {
         if (a.getAttribute('href') === page) a.parentElement.classList.add('active');
       });
+    })
+    .catch(function(err) {
+      console.error('Navbar load failed:', err);
     });
   </script>
 </body>

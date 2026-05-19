@@ -33,7 +33,13 @@
       }
     </script>
 
-  </head>
+    <link rel="preload" href="header.html" as="fetch" crossorigin="anonymous">
+  <style>
+  #navbar-placeholder { opacity: 0; transition: opacity 0.15s ease; }
+  #navbar-placeholder.loaded { opacity: 1; }
+  </style>
+  <link rel="shortcut icon" type="image/png" href="home/img/pierre_gaillard.png" />
+</head>
   <body>
 
     <div class="container-fluid">
@@ -50,60 +56,31 @@
           </h1>
           <hr>
           <p>
-            I am interested in statistical learning with a particular focus on online learning. I carried out my <a href="./doc/theseGaillard.pdf">PhD thesis</a> with Yannig Goude and <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz</a> on individual sequences. I am currently working as a junior researcher at INRIA. You can find below a list of my publications.
+            I work on statistical learning theory with a particular focus on <strong>online learning</strong>: sequential prediction and aggregation of experts, bandit problems (stochastic, adversarial, sleeping, dueling), online convex optimisation, nonparametric regression, and applications to reinforcement learning and demand forecasting. My <a href="./doc/theseGaillard.pdf">PhD thesis</a>, supervised by Yannig Goude and <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz</a>, focused on prediction of individual sequences.
+          </p>
+          <p>
+            <a href="https://scholar.google.com/citations?user=-CPaGaEAAAAJ&hl=en">Google Scholar</a> &nbsp;&middot;&nbsp;
+            <a href="https://orcid.org/0000-0001-6777-6127">ORCID</a>
           </p>
 
-          <h3>Articles</h3>
-          <h5>Submitted articles and preprints</h5>
-          <ul> 
-            <li> 
-              <a href="https://arxiv.org/pdf/2406.12366" class="article">Structured prediction in online learning.</a> Pierre Boudard, Pierre Gaillard, and Alessandro Rudi.
-            </li>
-            <li> 
-              <a href="https://arxiv.org/pdf/2309.07530.pdf" class="article">Adaptive approximation of monotone functions.</a> Pierre Gaillard, Sébastien Gerchinovitz, Etienne de Montbrun.
-            </li>
-            <li>
-              <a href="https://arxiv.org/pdf/2505.19741" class="article">Minimax Adaptive Online Nonparametric Regression over Besov spaces.</a> Paul Liautaud, Pierre Gaillard, Olivier Wintenberger.
-            </li>
-            <li>
-              <a href="" class="article">Enjoying Non-linearity in Multinomial Logistic Bandits.</a> Pierre Boudart, Pierre Gaillard, Alessandro Rudi.
-            </li>
-          </ul>
+          
 
-          <h5>Articles in proceedings of international conferences</h5>
+          
+                    <h3>Publications</h3>
 
+<h5>Bandits and online decision making</h5>
           <ul>
             <li>
-              <a href="https://hal.science/hal-05097004/document" class="article">Optimised projection-free algorithms for online learning: construction and worst-case analysis.</a> Julien Weibel, Pierre Gaillard, Wouter M Koolen, Adrien Taylor. AISTATS 2026. 
-            </li>
-            <li>
-              <a href="https://arxiv.org/abs/2601.07492" class="article">Online Markov Decision Processes with Terminal Law Constraints.</a> Bianca Marin Moreno, Margaux Brégère, Pierre Gaillard, Nadia Oudjane. ALT 2026.
-            </li>
-            <li>
-              <a href="https://hal.science/hal-05059067/document"  class="article">Online Episodic Convex Reinforcement Learning.</a> Bianca Marin Moreno, Khaled Eldowa, Margaux Brégère, Pierre Gaillard, and Nadia Oudjane. ICML, 2025. 
-            </li>
-            <li>
-              <a href="https://openreview.net/pdf?id=fC4bh1PmZr" class="article">Counterfactual Learning of Stochastic Policies with Continuous Actions.</a> Houssam Zenati, Alberto Bietti, Matthieu Martin, Eustache Diemert, Pierre Gaillard, Julien Mairal. TMLR, 2025
+              <a href="https://arxiv.org/pdf/2507.05306" class="article">Enjoying Non-linearity in Multinomial Logistic Bandits.</a> Pierre Boudart, Pierre Gaillard, Alessandro Rudi.
             </li>
             <li>
               <a href="https://openreview.net/pdf?id=kx8i1yfkRX" class="article">Finally Rank-Breaking Conquers MNL Bandits: Optimal and Efficient Algorithms for MNL Assortment.</a> Aadirupa Saha and Pierre Gaillard. ICLR, 2025. 
             </li>
             <li>
-              <a href="https://raw.githubusercontent.com/mlresearch/v272/main/assets/liautaud25a/liautaud25a.pdf" class="article">Minimax-optimal and Locally-adaptive Online Nonparametric Regression.</a> Paul Liautaud, Pierre Gaillard, Olivier Wintenberger. ALT, 2025. 
-            </li>
-            <li>
               <a href="https://arxiv.org/pdf/2410.08578" class="article">Logarithmic Regret for Unconstrained Submodular Maximization Stochastic Bandit.</a> Julien Zhou, Pierre Gaillard, Thibaud Rahier, and Julyan Arbel. ALT, 2025. 
             </li>
             <li>
-              <a href="https://arxiv.org/pdf/2405.19807" class = "article">MetaCURL: Non-stationary Concave Utility Reinforcement Learning.</a> Bianca Marin Moreno,  Margaux Brégère, Pierre Gaillard, and Nadia Oudjane. NeurIPS, 2024.
-            </li>
-            <li>
               <a href="https://arxiv.org/pdf/2402.15171.pdf" class = "article">Covariance-Adaptive Least-Squares Algorithm for Stochastic Combinatorial Semi-Bandits.</a> Julien Zhou, Pierre Gaillard, Thibaud Rahier, Houssam Zenati, and Julyan Arbel. NeurIPS, 2024.
-            </li>
-            <li><a href="https://arxiv.org/abs/2311.18346" class="article">Efficient Model-Based Concave Utility Reinforcement Learning through Greedy Mirror Descent.</a> Bianca Marin Moreno, Margaux Brégère, Pierre Gaillard, Nadia Oudjane. AISTATS, 2024. 
-            </li>
-            <li>
-              <a href="https://arxiv.org/pdf/2302.12120.pdf" class="article">Sequential Counterfactual Risk Minimization.</a> Houssam Zenati, Eustache Diemert, Matthieu Martin, Julien Mairal, Pierre Gaillard. ICML, 2023. 
             </li>
             <li>
               <a href="https://arxiv.org/pdf/2210.14998.pdf" class="article">One Arrow, Two Kills: An Unified Framework for Achieving Optimal Regret Guarantees in Sleeping Bandits.</a> Pierre Gaillard, Aadirupa Saha and Soham Dan. AISTATS, 2023.
@@ -114,606 +91,142 @@
             <li>
                 <a href="https://arxiv.org/pdf/2202.05638.pdf" class="article">Efficient Kernel UCB for Contextual Bandits.</a> Houssam Zenati, Alberto Bietti, Eustache Diemert, Julien Mairal, Matthieu Martin, Pierre Gaillard. AISTATS, 2022. 
             </li>
-          	<li>
+            <li>
               <a href="https://arxiv.org/pdf/2107.02274.pdf" class="article">Dueling Bandits with Adversarial Sleeping.</a> Aadirupa Saha, Pierre Gaillard. NeurIPS, 2021. 
-            </li>
-            <li>
-              <a href="https://arxiv.org/pdf/2106.07644.pdf" class="article">A Continuized View on Nesterov Acceleration for Stochastic Gradient Descent and Randomized Gossip.</a> Mathieu Even, Raphaël Berthier, Francis Bach, Nicolas Flammarion, Pierre Gaillard, Hadrien Hendrikx, Laurent Massoulié, Adrien Taylor. NeurIPS (<a href="https://nips.cc/virtual/2021/poster/28427">Outstanding paper award</a>, &lt;1‰ of submitted papers), 2021. 
-            </li>
-            <li>
-              <a href="https://hal.science/hal-03370530/document" class="article">Mixability made efficient: Fast online multiclass logistic regression.</a> Rémi Jézéquel, Pierre Gaillard, and Alessandro Rudi. NeurIPS (Spotlight, &lt;3% of submitted papers), 2021.
             </li>
             <li>
               <a href="https://hal.inria.fr/hal-03363014/document" class="article">Online Sign Identification: Minimization of the Number of Errors in Thresholding Bandits.</a> Reda Ouhamma, Rémy Degenne, Vianney Perchet, and Pierre Gaillard. NeurIPS (Spotlight, &lt;3% of submitted papers), 2021.
             </li>
             <li>
-              <a href="https://arxiv.org/abs/2006.08212" class = "article">Tight Nonparametric Convergence Rates for Stochastic Gradient Descent under the Noiseless Linear Model.</a> <a href="https://raphael-berthier.github.io/">Raphaël Berthier</a>, <a href="http://www.di.ens.fr/~fbach/">Francis Bach</a>, <a href = "index.html">Pierre Gaillard.</a> NeurIPS, 2020.
+              <a href="https://arxiv.org/abs/2004.06248" class = "article">Improved Sleeping Bandits with Stochastic Actions Sets and Adversarial Rewards.</a> Aadirupa Saha, <a href="index.html">Pierre Gaillard</a>, <a href="http://researchers.lille.inria.fr/~valko/hp/">Michal Valko.</a> ICML, 2020.</li>
+            <li>
+              <a href="https://arxiv.org/abs/1902.09917" class = "article">Efficient online learning with Kernels for adversarial large scale problems.</a> Rémi Jézéquel, <a href="index.html">Pierre Gaillard</a>, <a href="https://www.di.ens.fr/~rudi/">Alessandro Rudi.</a> NeurIPS, 2019.</li>
+            <li>
+              <a href="https://arxiv.org/abs/1901.09532" class="article">Target Tracking for Contextual Bandits: Application to Demand Side Management.</a> Margaux Brégère, <a href="index.html">Pierre Gaillard</a>, Yannig Goude, <a href="http://stoltz.perso.math.cnrs.fr">Gilles Stoltz.</a> ICML, 2019.</li>
+          </ul>
+
+          <h5>Online learning and aggregation</h5>
+          <ul>
+            <li>
+              <a href="https://hal.science/hal-05097004/document" class="article">Optimised projection-free algorithms for online learning: construction and worst-case analysis.</a> Julien Weibel, Pierre Gaillard, Wouter M Koolen, Adrien Taylor. AISTATS 2026. 
+            </li>
+            <li>
+              <a href="https://arxiv.org/pdf/2209.13932.pdf" class="article">Efficient and Near-Optimal Online Portfolio Selection.</a> Rémi Jézéquel, Dmitrii M. Ostrovskii, Pierre Gaillard.  Mathematics of Operations Research. 2025.</li>
+            <li> 
+              <a href="https://arxiv.org/pdf/2406.12366" class="article">Structured prediction in online learning.</a> Pierre Boudard, Pierre Gaillard, and Alessandro Rudi.
+            </li>
+            <li>
+              <a href="https://hal.science/hal-03370530/document" class="article">Mixability made efficient: Fast online multiclass logistic regression.</a> Rémi Jézéquel, Pierre Gaillard, and Alessandro Rudi. NeurIPS (Spotlight, &lt;3% of submitted papers), 2021.
             </li>
             <li>
               <a href="https://arxiv.org/abs/2003.08109" class = "article">Efficient improper learning for online logistic regression.</a> Rémi Jézéquel, <a href="index.html">Pierre Gaillard</a>, <a href="https://www.di.ens.fr/~rudi/">Alessandro Rudi.</a> COLT, 2020.
             </li>
             <li>
-              <a href="http://proceedings.mlr.press/v119/saha20a.html" class = "article">Improved Sleeping Bandits with Stochastic Actions Sets and Adversarial Rewards.</a> Aadirupa Saha, <a href="index.html">Pierre Gaillard</a>, <a href="http://researchers.lille.inria.fr/~valko/hp/">Michal Valko.</a> ICML, 2020.
-              <br/>
-              <ul class="info">
-                <li>
-                  <a href="https://hal.science/hal-02950106/document">HAL</a>
-                </li>
-                <li>
-                  <a href="https://arxiv.org/abs/2004.06248">arXiv</a>
-                </li>
-                <li>
-                  <a onclick="toggle_visibility('abstract-SahaEtAl2020');"><span id="show-abstract-SahaEtAl2020">Show</span><span id="hide-abstract-SahaEtAl2020" style="display:none;">Hide</span> abstract</a>
-                </li>
-                <li>   
-                  <a onclick="toggle_visibility('bibtex-SahaEtAl2020');"><span id="show-bibtex-SahaEtAl2020">Show</span><span id="hide-bibtex-SahaEtAl2020" style="display:none;">Hide</span> bibtex</a>
-                </li>
-              </ul>
-              <div id="abstract-SahaEtAl2020" class="abstract">
-                In this paper, we consider the problem of sleeping bandits with stochastic action sets and adversarial rewards. In this setting, in contrast to most work in bandits, the actions may not be available at all times. For instance, some products might be out of stock in item recommendation. The best existing efficient (i.e., polynomial-time) algorithms for this problem only guarantee an  $O(T^{2/3})$  upper-bound on the regret. Yet, inefficient algorithms based on EXP4 can achieve  $O(\sqrt{T})$ . In this paper, we provide a new computationally efficient algorithm inspired by EXP3 satisfying a regret of order  $O(\sqrt{T})$  when the availabilities of each action $i \in \mathcal{A}$  are independent. We then study the most general version of the problem where at each round available sets are generated from some unknown arbitrary distribution (i.e., without the independence assumption) and propose an efficient algorithm with  $O(\sqrt{2^KT})$  regret guarantee. Our theoretical results are corroborated with experimental evaluations.
-              </div>
-              <div id="bibtex-SahaEtAl2020" class="bibtex"><pre>@inproceedings{saha2020improved,
-      title={Improved sleeping bandits with stochastic action sets and adversarial rewards},
-      author={Saha, Aadirupa and Gaillard, Pierre and Valko, Michal},
-      booktitle={International Conference on Machine Learning},
-      pages={8357--8366},
-      year={2020},
-      organization={PMLR}
-    }</pre></div>
-            </li>
-            <li>
-              <a href="http://papers.nips.cc/paper/9140-efficient-online-learning-with-kernels-for-adversarial-large-scale-problems" class = "article">Efficient online learning with Kernels for adversarial large scale problems.</a> Rémi Jézéquel, <a href="index.html">Pierre Gaillard</a>, <a href="https://www.di.ens.fr/~rudi/">Alessandro Rudi.</a> NeurIPS, 2019.
-              <br />
-              <ul class="info">
-                <li>
-                  <a href="https://hal.science/hal-02019402/document">HAL</a>
-                </li>
-                <li>
-                  <a href="https://arxiv.org/abs/1902.09917">arXiv</a>
-                </li>
-                <li>
-                  <a onclick="toggle_visibility('abstract-JezequelEtAl2019');"><span id="show-abstract-JezequelEtAl2019">Show</span><span id="hide-abstract-JezequelEtAl2019" style="display:none;">Hide</span> abstract</a>
-                </li>
-                <li>   
-                  <a onclick="toggle_visibility('bibtex-JezequelEtAl2019');"><span id="show-bibtex-JezequelEtAl2019">Show</span><span id="hide-bibtex-JezequelEtAl2019" style="display:none;">Hide</span> bibtex</a>
-                </li>
-              </ul>
-              <div id="abstract-JezequelEtAl2019" class="abstract">We are interested in a framework of online learning with kernels for low-dimensional, but large-scale and potentially adversarial datasets. 
-We study the computational and theoretical performance of online variations of kernel Ridge regression. Despite its simplicity, the algorithm we study is the first  to achieve the optimal regret for a wide range of kernels with a per-round complexity of order $n^\alpha$ with $\alpha < 2$. 
-The algorithm we consider is based on approximating the kernel with the linear span of basis functions. Our contributions are twofold: 1) For the Gaussian kernel, we propose to build the basis beforehand (independently of the data) through Taylor expansion. For $d$-dimensional inputs, we provide a (close to) optimal regret of order $O((\log n)^{d+1})$ with per-round time complexity and space complexity $O((\log n)^{2d})$. This makes the algorithm a suitable choice as soon as $n \gg e^d$ which is likely to happen in a scenario with small dimensional and large-scale dataset; 2) For general kernels with low effective dimension, the basis functions are updated sequentially, adapting to the data, by sampling Nyström points. In this case, our algorithm improves the computational trade-off known for online kernel regression. </div>
-              <div id="bibtex-JezequelEtAl2019" class="bibtex"><pre>@incollection{JezequelEtAl2019,
-              title = {Efficient online learning with kernels for adversarial large scale problems},
-              author = {J\'{e}z\'{e}quel, R\'{e}mi and Gaillard, Pierre and Rudi, Alessandro},
-              booktitle = {Advances in Neural Information Processing Systems 32},
-              editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
-              pages = {9432--9441},
-              year = {2019},
-              publisher = {Curran Associates, Inc.},
-              url = {http://papers.nips.cc/paper/9140-efficient-online-learning-with-kernels-for-adversarial-large-scale-problems.pdf}
-            }</pre></div>
-            </li>
-            <li>
-              <a href="https://arxiv.org/abs/1901.09532" class="article">Target Tracking for Contextual Bandits: Application to Demand Side Management.</a> Margaux Brégère, <a href="index.html">Pierre Gaillard</a>, Yannig Goude, <a href="http://stoltz.perso.math.cnrs.fr">Gilles Stoltz.</a> ICML, 2019.
-              <br />
-              <ul class="info">
-                <li>
-                  <a href="https://hal.science/hal-01994144/document">HAL</a>
-                </li>
-                <li>
-                  <a href="https://arxiv.org/abs/1901.09532">arXiv</a>
-                </li>
-                <li>
-                  <a onclick="toggle_visibility('abstract-BregereEtAl2019');"><span id="show-abstract-BregereEtAl2019">Show</span><span id="hide-abstract-BregereEtAl2019" style="display:none;">Hide</span> abstract</a>
-                </li>
-                <li>   
-                  <a onclick="toggle_visibility('bibtex-BregereEtAl2019');"><span id="show-bibtex-BregereEtAl2019">Show</span><span id="hide-bibtex-BregereEtAl2019" style="display:none;">Hide</span> bibtex</a>
-                </li>
-              </ul>
-              <div id="abstract-BregereEtAl2019" class="abstract">We propose a contextual-bandit approach for demand side management by offering price incentives. More
-precisely, a target mean consumption is set at each round and the mean consumption is modeled as a complex
-function of the distribution of prices sent and of some contextual variables such as the temperature, weather,
-and so on. The performance of our strategies is measured in quadratic losses through a regret criterion. We
-offer $\sqrt{T}$ upper bounds on this regret (up to poly-logarithmic terms), for strategies inspired by standard
-strategies for contextual bandits. Simulations on a real data set
-gathered by UK Power Networks, in which price incentives were offered, show that our strategies are effective and
-may indeed manage demand response by suitably picking the price levels. </div>
-              <div id="bibtex-BregereEtAl2019" class="bibtex"><pre>@InProceedings{pmlr-v97-bregere19a,
-              title =    {Target Tracking for Contextual Bandits: Application to Demand Side Management},
-              author =   {Br{\'e}g{\`e}re, Margaux and Gaillard, Pierre and Goude, Yannig and Stoltz, Gilles},
-              booktitle =    {Proceedings of the 36th International Conference on Machine Learning},
-              pages =    {754--763},
-              year =   {2019},
-              editor =   {Chaudhuri, Kamalika and Salakhutdinov, Ruslan},
-              volume =   {97},
-              series =   {Proceedings of Machine Learning Research},
-              address =    {Long Beach, California, USA},
-              month =    {09--15 Jun},
-              publisher =    {PMLR},
-              pdf =    {http://proceedings.mlr.press/v97/bregere19a/bregere19a.pdf},
-              url =    {http://proceedings.mlr.press/v97/bregere19a.html},
-              abstract =   {We propose a contextual-bandit approach for demand side management by offering price incentives. More precisely, a target mean consumption is set at each round and the mean consumption is modeled as a complex function of the distribution of prices sent and of some contextual variables such as the temperature, weather, and so on. The performance of our strategies is measured in quadratic losses through a regret criterion. We offer $T^{2/3}$ upper bounds on this regret (up to poly-logarithmic terms)—and even faster rates under stronger assumptions—for strategies inspired by standard strategies for contextual bandits (like LinUCB, see Li et al., 2010). Simulations on a real data set gathered by UK Power Networks, in which price incentives were offered, show that our strategies are effective and may indeed manage demand response by suitably picking the price levels.}
-            }</pre></div>
-            </li>
-            <li>
-              <a href="http://proceedings.mlr.press/v98/gaillard19a.html" class="article">Uniform regret bounds over R^d for the sequential linear regression problem with the square loss.</a>
+              <a href="https://arxiv.org/abs/1805.11386" class="article">Uniform regret bounds over R^d for the sequential linear regression problem with the square loss.</a>
               <a href = "index.html">Pierre Gaillard</a>,
               <a href="http://www.math.univ-toulouse.fr/~sgerchin/">Sébastien Gerchinovitz</a>,
               Malo Huard,
-              <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz.</a> ALT, 2019.              
-              <br />
-              <ul class="info">
-                <li>
-                  <a href="https://hal.science/hal-01802004v2/document">HAL</a>
-                </li>
-                <li>
-                  <a href="https://arxiv.org/abs/1805.11386">arXiv</a>
-                </li>
-                <li>
-                  <a onclick="toggle_visibility('abstract-GaillardEtAl2019');"><span id="show-abstract-GaillardEtAl2019">Show</span><span id="hide-abstract-GaillardEtAl2019" style="display:none;">Hide</span> abstract</a>
-                </li>
-                <li>   
-                  <a onclick="toggle_visibility('bibtex-GaillardEtAl2019');"><span id="show-bibtex-GaillardEtAl2019">Show</span><span id="hide-bibtex-GaillardEtAl2019" style="display:none;">Hide</span> bibtex</a>
-                </li>
-              </ul>
-              <div id="abstract-GaillardEtAl2019" class="abstract">We consider the setting of online linear regression for arbitrary deterministic sequences,
-with the square loss. We are interested in obtaining regret bounds that hold uniformly over all competitor vectors.
-When the feature sequence is known at the beginning of the game, they provided closed-form regret bounds of $2d B^2 \ln T + O_T(1)$, where $T$ is the number of rounds and $B$ is a bound on the observations. Instead, we derive bounds with an optimal constant of $1$ in front of the $d B^2 \ln T$ term. In the case of sequentially revealed features, we also derive an asymptotic regret bound of $d B^2 \ln T$ for any individual sequence of features and bounded observations.
-All our algorithms are variants of the online non-linear ridge regression forecaster, either with a data-dependent regularization or with almost no regularization.
-              </div>
-              <div id="bibtex-GaillardEtAl2019" class="bibtex"><pre>@InProceedings{pmlr-v98-gaillard19a,
-          title =    {Uniform regret bounds over $\mathbb{R}^d$ for the sequential linear regression problem with the square loss},
-          author =   {Gaillard, Pierre and Gerchinovitz, S{\'e}bastien and Huard, Malo and Stoltz, Gilles},
-          booktitle =    {Proceedings of the 30th International Conference on Algorithmic Learning Theory},
-          pages =    {404--432},
-          year =   {2019},
-          editor =   {Garivier, Aur\'elien and Kale, Satyen},
-          volume =   {98},
-          series =   {Proceedings of Machine Learning Research},
-          address =    {Chicago, Illinois},
-          month =    {22--24 Mar},
-          publisher =    {PMLR},
-          pdf =    {http://proceedings.mlr.press/v98/gaillard19a/gaillard19a.pdf},
-          url =    {http://proceedings.mlr.press/v98/gaillard19a.html},
-          abstract =   {We consider the setting of online linear regression for arbitrary deterministic sequences,
-         with the square loss. We are interested in the aim set by Bartlett et al. (2015):
-         obtain regret bounds that hold uniformly over all competitor vectors.
-         When the feature sequence is known at the beginning of the game, they provided closed-form
-         regret bounds of $2d B^2 \ln T + \mathcal{O}_T(1)$, where $T$ is the number of rounds and $B$ is a
-         bound on the observations. Instead, we derive bounds with an optimal constant of $1$ in front of
-         the $d B^2 \ln T$ term. In the case of sequentially revealed features, we also derive an asymptotic
-         regret bound of $d B^2 \ln T$ for any individual sequence of features and bounded observations.
-         All our algorithms are variants of the online non-linear ridge regression forecaster, either with a
-         data-dependent regularization or with almost no regularization.}
-        }</pre></div>
+              <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz.</a> ALT, 2019.</li>
+            <li>
+              <a href="https://arxiv.org/abs/1805.09174" class="article">Efficient online algorithms for fast-rate regret bounds under sparsity.</a> <a href = "index.html">Pierre Gaillard</a>, <a href="http://wintenberger.fr/index.html">Olivier Wintenberger.</a> NeurIPS, 2018.</a></li>
+            <li>
+            <a href="http://arxiv.org/abs/1610.05022" class="article">Sparse Accelerated Exponential Weights.</a> <a href = "index.html">Pierre Gaillard</a>, <a href="http://wintenberger.fr/index.html">Olivier Wintenberger.</a> <a href="http://www.aistats.org">AISTATS, 2017.</a></li>
+            <li>
+        <a href="http://www.esaim-proc.org/articles/proc/pdf/2015/04/proc145114.pdf" class="article">Online learning and game theory. A quick overview with recent results and applications.</a> <a href="https://sites.google.com/site/matfaure/">Mathieu Faure</a>, <a href = "index.html">Pierre Gaillard</a>, <a href="http://mescal.imag.fr/membres/bruno.gaujal/">Bruno Gaujal</a>, and <a href="https://sites.google.com/site/vianneyperchet/">Vianney Perchet.</a> ESAIM: Proceedings and Surveys, 51, 246-271, 2015.</li>
+            <li>
+            <a href="http://arxiv.org/abs/1402.2044" class="article">A second-order bound with excess losses.</a>
+            <a href = "index.html">Pierre Gaillard</a>, <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz</a>, <a href="http://www.timvanerven.nl">Tim van Erven.</a> COLT, 2014.</li>
+            <li>
+            <a href="http://arxiv.org/abs/1202.3323" class="article">Mirror descend meets fixed share (and feels no regret).</a> <a href="http://homes.di.unimi.it/~cesabian/">Nicolò Cesa-Bianchi</a>, <a href = "index.html">Pierre Gaillard</a>, <a href="http://econ.upf.edu/~lugosi/">Gàbor Lugosi</a>, and <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz.</a> NIPS, 2012.</li>
+          </ul>
+
+          <h5>Nonparametric methods</h5>
+          <ul>
+            <li>
+              <a href="https://arxiv.org/pdf/2505.19741" class="article">Minimax Adaptive Online Nonparametric Regression over Besov spaces.</a> Paul Liautaud, Pierre Gaillard, Olivier Wintenberger.
             </li>
             <li>
-              <a href="http://papers.nips.cc/paper/7934-efficient-online-algorithms-for-fast-rate-regret-bounds-under-sparsity" class="article">Efficient online algorithms for fast-rate regret bounds under sparsity.</a> <a href = "index.html">Pierre Gaillard</a>, <a href="http://wintenberger.fr/index.html">Olivier Wintenberger.</a> NeurIPS, 2018.</a>            
-              <br />
-              <ul class="info">
-                <li>
-                  <a href="https://hal-ens.archives-ouvertes.fr/hal-01798201/document">HAL</a>
-                </li>
-                <li>
-                  <a href="https://arxiv.org/abs/1805.09174">arXiv</a>
-                </li>
-                <li>
-                  <a onclick="toggle_visibility('abstract-GaillardEtAl2018');"><span id="show-abstract-GaillardEtAl2018">Show</span><span id="hide-abstract-GaillardEtAl2018" style="display:none;">Hide</span> abstract</a>
-                </li>
-                <li>   
-                  <a onclick="toggle_visibility('bibtex-GaillardEtAl2018');"><span id="show-bibtex-GaillardEtAl2018">Show</span><span id="hide-bibtex-GaillardEtAl2018" style="display:none;">Hide</span> bibtex</a>
-                </li>
-              </ul>
-              <div id="abstract-GaillardEtAl2018" class="abstract">We consider the problem of online convex optimization in two different settings: arbitrary and  i.i.d. sequence of convex loss functions. In both settings, we provide efficient algorithms whose cumulative excess risks are controlled with fast-rate sparse bounds. 
-First, the excess risks bounds depend on the sparsity of the objective rather than on the dimension of the parameters space. Second, their rates are faster than the slow-rate $\smash{1/\sqrt{T}}$ under additional convexity assumptions on the loss functions. In the adversarial setting, we develop an algorithm BOA+ whose cumulative excess risks is controlled by several bounds with different trade-offs between sparsity and rate for strongly convex loss functions. In the i.i.d. setting under the Łojasiewicz's assumption, we establish new risk bounds that are sparse with a rate adaptive to the convexity of the risk (ranging from a rate $1/\sqrt{T}$ for general convex risk to ${1}/{T}$ for strongly convex risk). These results generalize previous works on sparse online learning under weak assumptions on the risk. 
-            </div>
-              <div id="bibtex-GaillardEtAl2018" class="bibtex"><pre>@incollection{GaillardEtAl2018,
-            title = {Efficient online algorithms for fast-rate regret bounds under sparsity},
-            author = {Gaillard, Pierre and Wintenberger, Olivier},
-            booktitle = {Advances in Neural Information Processing Systems 31},
-            editor = {S. Bengio and H. Wallach and H. Larochelle and K. Grauman and N. Cesa-Bianchi and R. Garnett},
-            pages = {7026--7036},
-            year = {2018},
-            publisher = {Curran Associates, Inc.},
-            url = {http://papers.nips.cc/paper/7934-efficient-online-algorithms-for-fast-rate-regret-bounds-under-sparsity.pdf}
-            }</pre></div>
+              <a href="https://raw.githubusercontent.com/mlresearch/v272/main/assets/liautaud25a/liautaud25a.pdf" class="article">Minimax-optimal and Locally-adaptive Online Nonparametric Regression.</a> Paul Liautaud, Pierre Gaillard, Olivier Wintenberger. ALT, 2025. 
+            </li>
+            <li> 
+              <a href="https://arxiv.org/pdf/2309.07530.pdf" class="article">Adaptive approximation of monotone functions.</a> Pierre Gaillard, Sébastien Gerchinovitz, Etienne de Montbrun.
             </li>
             <li>
-              <a href="https://hal.science/hal-01476771/document" class="article">Online nonparametric learning, chaining, and the role of partial feedback.</a> 
+        <a href="https://arxiv.org/pdf/2102.03594.pdf" class="article">Online nonparametric regression with Sobolev kernels.</a> Oleksandr Zadorozhnyi, Pierre Gaillard, Sebastien Gerschinovitz, Alessandro Rudi.
+    </li>
+            <li>
+              <a href="https://arxiv.org/abs/2006.08212" class = "article">Tight Nonparametric Convergence Rates for Stochastic Gradient Descent under the Noiseless Linear Model.</a> <a href="https://raphael-berthier.github.io/">Raphaël Berthier</a>, <a href="http://www.di.ens.fr/~fbach/">Francis Bach</a>, <a href = "index.html">Pierre Gaillard.</a> NeurIPS, 2020.
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/1702.08211" class="article">Online nonparametric learning, chaining, and the role of partial feedback.</a> 
               <a href="http://cesa-bianchi.di.unimi.it/">Nicolò Cesa-Bianchi</a>, 
               <a href = "index.html">Pierre Gaillard</a>, 
               <a href="https://sites.google.com/view/cgentile/">Claudio Gentile</a>,
-              <a href="http://www.math.univ-toulouse.fr/~sgerchin/">Sébastien Gerchinovitz.</a> COLT, 2017.
-              <br />
-              <ul class="info">
-                <li>
-                  <a href="https://hal.science/hal-01476771/document">HAL</a>
-                </li>
-                <li>
-                  <a href="https://arxiv.org/abs/1702.08211">arXiv</a>
-                </li>
-                <li>
-                  <a onclick="toggle_visibility('abstract-CesaBianchiEtAl2017');"><span id="show-abstract-CesaBianchiEtAl2017">Show</span><span id="hide-abstract-CesaBianchiEtAl2017" style="display:none;">Hide</span> abstract</a>
-                </li>
-                <li>   
-                  <a onclick="toggle_visibility('bibtex-CesaBianchiEtAl2017');"><span id="show-bibtex-CesaBianchiEtAl2017">Show</span><span id="hide-bibtex-CesaBianchiEtAl2017" style="display:none;">Hide</span> bibtex</a>
-                </li>
-              </ul>
-              <div id="abstract-CesaBianchiEtAl2017" class="abstract">We investigate contextual online learning with nonparametric (Lipschitz) comparison classes un- der different assumptions on losses and feedback information. For full information feedback and Lipschitz losses, we characterize the minimax regret up to log factors by proving an upper bound matching a previously known lower bound. In a partial feedback model motivated by second-price auctions, we prove upper bounds for Lipschitz and semi-Lipschitz losses that improve on the known bounds for standard bandit feedback. Our analysis combines novel results for contextual second-price auctions with a novel algorithmic approach based on chaining. When the context space is Euclidean, our chaining approach is efficient and delivers an even better regret bound.</div>
-              <div id="bibtex-CesaBianchiEtAl2017" class="bibtex"><pre>@unpublished{cesabianchi:hal-01476771,
-                TITLE = {{Algorithmic Chaining and the Role of Partial Feedback in Online Nonparametric Learning}},
-                AUTHOR = {Cesa-Bianchi, Nicol{\`o} and Gaillard, Pierre and Gentile, Claudio and Gerchinovitz, S{\'e}bastien},
-                URL = {https://hal.science/hal-01476771},
-                NOTE = {This document is the full version of an extended abstract accepted for presentation at COLT 2017.},
-                YEAR = {2017},
-                MONTH = Jun,
-                KEYWORDS = {bandits ; online learning ; nonparametric ; chaining},
-                PDF = {https://hal.science/hal-01476771/file/NonparametricLearning.pdf},
-                HAL_ID = {hal-01476771}
-              }</pre></div>
-          </li>
-          <li>
-            <a href="https://arxiv.org/pdf/1610.05022v1.pdf" class="article">Sparse Accelerated Exponential Weights.</a> <a href = "index.html">Pierre Gaillard</a>, <a href="http://wintenberger.fr/index.html">Olivier Wintenberger.</a> <a href="http://www.aistats.org">AISTATS, 2017.</a><br />
-            <ul class="info">
-              <li>
-                <a href="https://hal.science/hal-01376808/document">HAL</a>
-              </li>
-              <li>
-                <a href="http://arxiv.org/abs/1610.05022">arXiv</a>
-              </li>
-              <li>
-                <a onclick="toggle_visibility('abstract-GaillardWintenberger2016');"><span id="show-abstract-GaillardWintenberger2016">Show</span><span id="hide-abstract-GaillardWintenberger2016" style="display:none;">Hide</span> abstract</a>
-              </li>
-              <li>   
-                <a onclick="toggle_visibility('bibtex-GaillardWintenberger2016');"><span id="show-bibtex-GaillardWintenberger2016">Show</span><span id="hide-GaillardWintenberger2016" style="display:none;">Hide</span> bibtex</a>
-              </li>
-            </ul>
+              <a href="http://www.math.univ-toulouse.fr/~sgerchin/">Sébastien Gerchinovitz.</a> COLT, 2017.</li>
+            <li>
+            <a href="http://arxiv.org/abs/1502.07697" class="article">A Chaining Algorithm for Online Nonparametric Regression.</a> <a href = "index.html">Pierre Gaillard</a>, <a href="http://www.math.univ-toulouse.fr/~sgerchin/">Sébastien Gerchinovitz.</a> COLT, 2015.</li>
+            <li>
+    <a href="http://arxiv.org/abs/1405.1533" class="article">A consistent deterministic regression tree for non-parametric prediction of time series.</a> <a href = "index.html">Pierre Gaillard</a>, Paul Baudin.</li>
+          </ul>
 
-            <div id="abstract-GaillardWintenberger2016" class="abstract">We consider the stochastic optimization problem where a convex function is minimized observing recursively the gradients. We introduce SAEW, a new procedure that accelerates exponential weights procedures with the slow rate $1/\sqrt{T}$ to procedures achieving the fast rate $1/T$. Under the strong convexity of the risk, we achieve the optimal rate of convergence for approximating sparse parameters in $\mathbb{R}^d$. The acceleration is achieved by using successive averaging steps in an online fashion. The procedure also produces sparse estimators thanks to additional hard threshold steps.</div>
-            <div id="bibtex-GaillardWintenberger2016" class="bibtex"><pre>@inproceedings{gaillard:hal-01376808,
-              TITLE = {{Sparse Accelerated Exponential Weights}},
-              AUTHOR = {Gaillard, Pierre and Wintenberger, Olivier},
-              URL = {https://hal.science/hal-01376808},
-              BOOKTITLE = {{20th International Conference on Artificial Intelligence and Statistics (AISTATS)}},
-              ADDRESS = {Fort Lauderdale, United States},
-              YEAR = {2017},
-              MONTH = Apr,
-              PDF = {https://hal.science/hal-01376808/file/GaillardWintenberger2016-SAEW.pdf},
-              HAL_ID = {hal-01376808}
-            }</pre></div>
-          </li>
-          <li>
-            <a href="https://hal.science/hal-01120813/document" class="article">A Chaining Algorithm for Online Nonparametric Regression.</a> <a href = "index.html">Pierre Gaillard</a>, <a href="http://www.math.univ-toulouse.fr/~sgerchin/">Sébastien Gerchinovitz.</a> COLT, 2015.<br />
-            <ul class="info">
-              <li>
-                <a href="https://hal.science/hal-01120813/document">HAL</a>
-              </li>
-              <li>
-                <a href="http://arxiv.org/abs/1502.07697">arXiv</a>
-              </li>
-              <li>
-                <a href="http://jmlr.csail.mit.edu/proceedings/papers/v40/Gaillard15.html">Proceedings</a>
-              </li>
-              <li>
-                <a href="http://videolectures.net/colt2015_gerchinovitz_nonparametric_regression/">Video lecture</a>
-              </li>
-              <li>
-                <a onclick="toggle_visibility('abstract-GaillardGerchinovitz2015');"><span id="show-abstract-GaillardGerchinovitz2015">Show</span><span id="hide-abstract-GaillardGerchinovitz2015" style="display:none;">Hide</span> abstract</a>
-              </li>
-              <li>   
-                <a onclick="toggle_visibility('bibtex-GaillardGerchinovitz2015');"><span id="show-bibtex-GaillardGerchinovitz2015">Show</span><span id="hide-GaillardGerchinovitz2015" style="display:none;">Hide</span> bibtex</a>
-              </li>
-            </ul>
+          <h5>Optimisation</h5>
+          <ul>
+            <li>
+              <a href="https://arxiv.org/pdf/2106.07644.pdf" class="article">A Continuized View on Nesterov Acceleration for Stochastic Gradient Descent and Randomized Gossip.</a> Mathieu Even, Raphaël Berthier, Francis Bach, Nicolas Flammarion, Pierre Gaillard, Hadrien Hendrikx, Laurent Massoulié, Adrien Taylor. NeurIPS (<a href="https://nips.cc/virtual/2021/poster/28427">Outstanding paper award</a>, &lt;1‰ of submitted papers), 2021. 
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/1805.08531" class="article">Accelerated Gossip in Networks of Given Dimension using Jacobi Polynomial Iterations.</a> <a href="https://raphael-berthier.github.io/">Raphaël Berthier</a>, <a href="http://www.di.ens.fr/~fbach/">Francis Bach</a>, <a href = "index.html">Pierre Gaillard</a>, SIAM Journal on Mathematics of Data Science. Volume 2, Issue 1, 2020.</li>
+          </ul>
 
-            <div id="abstract-GaillardGerchinovitz2015" class="abstract">We consider the problem of online nonparametric regression with arbitrary deterministic sequences. Using ideas from the chaining technique, we design an algorithm that achieves a Dudley-type regret bound similar to the one obtained in a non-constructive fashion by Rakhlin and Sridharan (2014). Our regret bound is expressed in terms of the metric entropy in the sup norm, which yields optimal guarantees when the metric and sequential entropies are of the same order of magnitude. In particular our algorithm is the first one that achieves optimal rates for online regression over Hölder balls. In addition we show for this example how to adapt our chaining algorithm to get a reasonable computational efficiency with similar regret guarantees (up to a log factor).</div>
-            <div id="bibtex-GaillardGerchinovitz2015" class="bibtex"><pre>@Inproceedings{GaillardGerchinovitz2015,
-              author = {Gaillard, Pierre and Gerchinovitz, Sébastien},
-              title = {A Chaining Algorithm for Online Nonparametric Regression},
-              year = {2015},
-              booktitle = {Proceedings of COLT'15},
-              publisher = {JMLR: Workshop and Conference Proceedings},
-              volume = {40},
-              pages = {764--796}
-            }</pre></div>
-          </li>
-          <li>
-            <a href="https://hal.science/hal-00943665/document/" class="article">A second-order bound with excess losses.</a>
-            <a href = "index.html">Pierre Gaillard</a>, <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz</a>, <a href="http://www.timvanerven.nl">Tim van Erven.</a> COLT, 2014. <br />
-            <ul class="info">
-              <li>
-                <a href="https://hal.science/hal-00943665/document/">HAL</a>
-              </li>
-              <li>
-                <a href="http://arxiv.org/abs/1402.2044">arXiv</a>
-              </li>
-              <li>
-                <a href="http://videolectures.net/colt2014_gaillard_losses/">Video lecture</a>
-              </li>
-              <li>
-                <a onclick="toggle_visibility('abstract4');"><span id="show-abstract4">Show</span><span id="hide-abstract4" style="display:none;">Hide</span> abstract</a>
-              </li>
-              <li>
-                <a onclick="toggle_visibility('bibtex4');" class="endinfo"><span id="show-bibtex4">Show</span><span id="hide-bibtex4" style="display:none;">Hide</span> bibtex</a>
-              </li>
-            </ul>
-            <div id="abstract4" class="abstract">
-              We study online aggregation of the predictions of experts, and first
-              show new second-order regret bounds in the standard setting, which
-              are obtained via a version of the Prod algorithm (and also a version of
-              the polynomially weighted average algorithm) with multiple learning
-              rates. These bounds are in terms of excess losses, the differences
-              between the instantaneous losses suffered by the algorithm and the ones
-              of a given expert. We then demonstrate the interest of these bounds in
-              the context of experts that report their confidences as a number in the
-              interval $[0,1]$ using a generic reduction to the standard setting. We
-              conclude by two other applications in the standard setting, which
-              improve the known bounds in case of small excess losses and show a
-            bounded regret against i.i.d. sequences of losses.</div>
-            <div id="bibtex4" class="bibtex"><pre>@INPROCEEDINGS{GaillardStoltzEtAl2014,
-              author = {Gaillard, Pierre and Stoltz, Gilles and van Erven, Tim},
-              title = {A Second-order Bound with Excess Losses},
-              booktitle = {Proceedings of COLT'14},
-              year = {2014},
-              volume = {35},
-              pages = {176--196},
-              publisher = {JMLR: Workshop and Conference Proceedings}
-            }</pre></div>
-          </li>
-          <li>
-            <a href="https://hal.science/hal-00670514/document/" class="article">Mirror descend meets fixed share (and feels no regret).</a> <a href="http://homes.di.unimi.it/~cesabian/">Nicolò Cesa-Bianchi</a>, <a href = "index.html">Pierre Gaillard</a>, <a href="http://econ.upf.edu/~lugosi/">Gàbor Lugosi</a>, and <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz.</a> NIPS, 2012. <br />
-            <ul class="info">
-              <li>
-                <a href="https://hal.science/hal-00670514/document/">
-                HAL</a>
-              </li>
-              <li>
-                <a href="http://arxiv.org/abs/1202.3323">arXiv</a>
-              </li>
-              <li>
-                <a onclick="toggle_visibility('abstract1');"><span id="show-abstract1">Show</span><span id="hide-abstract1" style="display:none;">Hide</span> abstract</a>
-              </li>
-              <li>
-                <a onclick="toggle_visibility('bibtex1');"><span id="show-bibtex1">Show</span><span id="hide-bibtex1" style="display:none;">Hide</span> bibtex</a>
-              </li>
-            </ul>
+          <h5>Reinforcement learning</h5>
+          <ul>
+            <li>
+              <a href="https://arxiv.org/abs/2601.07492" class="article">Online Markov Decision Processes with Terminal Law Constraints.</a> Bianca Marin Moreno, Margaux Brégère, Pierre Gaillard, Nadia Oudjane. ALT 2026.
+            </li>
+            <li>
+              <a href="https://hal.science/hal-05059067/document"  class="article">Online Episodic Convex Reinforcement Learning.</a> Bianca Marin Moreno, Khaled Eldowa, Margaux Brégère, Pierre Gaillard, and Nadia Oudjane. ICML, 2025. 
+            </li>
+            <li>
+              <a href="https://arxiv.org/pdf/2405.19807" class = "article">MetaCURL: Non-stationary Concave Utility Reinforcement Learning.</a> Bianca Marin Moreno,  Margaux Brégère, Pierre Gaillard, and Nadia Oudjane. NeurIPS, 2024.
+            </li>
+            <li><a href="https://arxiv.org/abs/2311.18346" class="article">Efficient Model-Based Concave Utility Reinforcement Learning through Greedy Mirror Descent.</a> Bianca Marin Moreno, Margaux Brégère, Pierre Gaillard, Nadia Oudjane. AISTATS, 2024. 
+            </li>
+          </ul>
 
-            <div id="abstract1" class="abstract">Mirror descent with an entropic regularizer is known to achieve shifting regret bounds that are logarithmic in the dimension. This is done using either a carefully designed projection or by a weight sharing technique. Via a novel unified analysis, we show that these two approaches deliver essentially equivalent bounds on a notion of regret generalizing shifting, adaptive, discounted, and other related regrets. Our analysis also captures and extends the generalized weight sharing technique of Bousquet and Warmuth, and can be refined in several ways, including improvements for small losses and adaptive tuning of parameters.</div>
-            <div id="bibtex1" class="bibtex"><pre>@Inproceedings{Cesa-BianchiGaillardLugosiStoltz2012,
-              author = {Cesa-Bianchi, Nicolò and Gaillard, Pierre and Lugosi, Gábor and Stoltz, Gilles},
-              title = {Mirror Descent Meets Fixed Share (and feels no regret)},
-              booktitle = {Proceedings of NIPS},
-              pages = {989-997},
-              year = 2012
-            }</pre></div>
-          </li>
-        </ul>
+          <h5>Counterfactual and off-policy learning</h5>
+          <ul>
+            <li>
+              <a href="https://openreview.net/pdf?id=fC4bh1PmZr" class="article">Counterfactual Learning of Stochastic Policies with Continuous Actions.</a> Houssam Zenati, Alberto Bietti, Matthieu Martin, Eustache Diemert, Pierre Gaillard, Julien Mairal. TMLR, 2025
+            </li>
+            <li>
+              <a href="https://arxiv.org/pdf/2302.12120.pdf" class="article">Sequential Counterfactual Risk Minimization.</a> Houssam Zenati, Eustache Diemert, Matthieu Martin, Julien Mairal, Pierre Gaillard. ICML, 2023. 
+            </li>
+          </ul>
 
-        <h5>Articles in international journals</h5>
-
-        <ul>
-          <li>
-              <a href="https://pubsonline.informs.org/doi/full/10.1287/moor.2023.0175" class="article">Efficient and Near-Optimal Online Portfolio Selection.</a> Rémi Jézéquel, Dmitrii M. Ostrovskii, Pierre Gaillard.  Mathematics of Operations Research. 2025.
-              <br/>
-              <ul class="info">
-              <li>
-                <a href="https://arxiv.org/pdf/2209.13932.pdf">arXiv</a>
-              </li>
-            </ul>
-          </li>
-
-          <li><a href="https://link.springer.com/article/10.1007/s10957-025-02658-9" class="article">(Online) Convex Optimization for Demand-Side Management: Application to Thermostatically Controlled Loads.</a> Bianca Marin Moreno, Margaux Brégère, Pierre Gaillard, Nadia Oudjane. Journal of Optimization Theory and Applications. Volume 205, article number 43, 2025. 
-              <br/>
-            <ul class="info">
-              <li>
-                <a href="https://cnrs.hal.science/hal-03972660">arXiv</a>
-              </li>
-            </ul>
-          </li>
-          <li>
+          <h5>Forecasting and applications</h5>
+          <ul>
+            <li><a href="https://cnrs.hal.science/hal-03972660" class="article">(Online) Convex Optimization for Demand-Side Management: Application to Thermostatically Controlled Loads.</a> Bianca Marin Moreno, Margaux Brégère, Pierre Gaillard, Nadia Oudjane. Journal of Optimization Theory and Applications. Volume 205, article number 43, 2025.</li>
+            <li>
               <a href="https://arxiv.org/pdf/2402.05145v1.pdf" class = "article">Online Convex Optimization for Survival Analysis: An Adaptive and Stochastic Approach.</a> Camila Fernandez, Pierre Gaillard, Joseph de Vilmarest, and Olivier Wintenberger. Statistical Papers. Volume 66, article number 86, 2025.
           </li>
-          <li>
+            <li>
               <a href="https://link.springer.com/article/10.1007/s41060-024-00642-6", class="article">Aggregation methods and comparative study in time-to-event analysis models.</a> Camila Fernandez, Chung Shue Chen, Pierre Gaillard, and Alonso Silva. International Journal of Data Science and Analytics. 2024.
             </li>
-          <li>
-              <a href="https://epubs.siam.org/doi/abs/10.1137/19M1244822" class="article">Accelerated Gossip in Networks of Given Dimension using Jacobi Polynomial Iterations.</a> <a href="https://raphael-berthier.github.io/">Raphaël Berthier</a>, <a href="http://www.di.ens.fr/~fbach/">Francis Bach</a>, <a href = "index.html">Pierre Gaillard</a>, SIAM Journal on Mathematics of Data Science. Volume 2, Issue 1, 2020. <br />
-            <ul class="info">
-              <li>
-                <a href="https://hal.science/hal-01797016/">
-                HAL</a>
-              </li>
-              <li>
-                <a href="https://arxiv.org/abs/1805.08531">arXiv</a>
-              </li>
-              <li>
-                <a onclick="toggle_visibility('abstract-BerthierEtAl2020');"><span id="show-abstract-BerthierEtAl2020">Show</span><span id="hide-abstract-BerthierEtAl2020" style="display:none;">Hide</span> abstract</a>
-              </li>
-              <li>
-                <a onclick="toggle_visibility('bibtex-BerthierEtAl2020');"><span id="show-bibtex-BerthierEtAl2020">Show</span><span id="hide-bibtex-BerthierEtAl2020" style="display:none;">Hide</span> bibtex</a>
-              </li>
-            </ul>
-
-            <div id="abstract-BerthierEtAl2020" class="abstract"> Consider a network of agents connected by communication links, where each agent holds a real value. The gossip problem consists in estimating the average of the values diffused in the network in a distributed manner. We develop a method solving the gossip problem that depends only on the spectral dimension of the network, that is, in the communication network set-up, the dimension of the space in which the agents live. This contrasts with previous work that required the spectral gap of the network as a parameter, or suffered from slow mixing. Our method shows an important improvement over existing algorithms in the non-asymptotic regime, i.e., when the values are far from being fully mixed in the network. Our approach stems from a polynomial-based point of view on gossip algorithms, as well as an approximation of the spectral measure of the graphs with a Jacobi measure. We show the power of the approach with simulations on various graphs, and with performance guarantees on graphs of known spectral dimension, such as grids and random percolation bonds. An extension of this work to distributed Laplacian solvers is discussed. As a side result, we also use the polynomial-based point of view to show the convergence of the message passing algorithm for gossip of Moallemi & Van Roy on regular graphs. The explicit computation of the rate of the convergence shows that message passing has a slow rate of convergence on graphs with small spectral gap.</div>
-            <div id="bibtex-BerthierEtAl2020" class="bibtex"><pre>@article{berthier2020accelerated,
-        title={Accelerated Gossip in Networks of Given Dimension using Jacobi Polynomial Iterations},
-        author={Berthier, Rapha{\"e}l and Bach, Francis and Gaillard, Pierre},
-        journal={SIAM Journal on Mathematics of Data Science},
-        volume={2},
-        number={1},
-        pages={24--47},
-        year={2020},
-        publisher={SIAM}
-      }</pre></div>
-          </li>
-         <li>
-          <a href="http://www.sciencedirect.com/science/article/pii/S0169207015001545" class="article">Additive models and robust aggregation for GEFCom2014 probabilistic electric load and electricity price forecasting.</a> <a href = "index.html">Pierre Gaillard</a>, Yannig Goude, and Raphaël Nedellec. International Journal of Forecasting, Volume 32, Issue 3, pages 1038–1050, 2016.<br />
-          <ul class="info">
             <li>
-              <a onclick="toggle_visibility('abstract-GaillardGoudeNedellec2015');"><span id="show-abstract-GaillardGoudeNedellec2015">Show</span><span id="hide-abstract-GaillardGoudeNedellec2015" style="display:none;">Hide</span> abstract</a>
-            </li>
-            <li>   
-              <a onclick="toggle_visibility('bibtex-GaillardGoudeNedellec2015');"><span id="show-bibtex-GaillardGoudeNedellec2015">Show</span><span id="hide-GaillardGoudeNedellec2015" style="display:none;">Hide</span> bibtex</a>
-            </li>
+          <a href="http://www.sciencedirect.com/science/article/pii/S0169207015001545" class="article">Additive models and robust aggregation for GEFCom2014 probabilistic electric load and electricity price forecasting.</a> <a href = "index.html">Pierre Gaillard</a>, Yannig Goude, and Raphaël Nedellec. International Journal of Forecasting, Volume 32, Issue 3, pages 1038–1050, 2016.</li>
+            <li>
+      <a href="http://www.springer.com/us/book/9783319187310" class="article">Forecasting electricity consumption by aggregating experts; how to design a good set of experts.</a> <a href = "index.html">Pierre Gaillard</a>, Yannig Goude. In A. Antoniadis et al. editors, Modeling and Stochastic Learning for Forecasting in High Dimensions, volume 217 of Lecture Notes in Statistics, pages 95&ndash;115. Springer, 2015.</li>
+            <li><a href="http://arxiv.org/abs/1207.1965" class="article">Forecasting electricity consumption by aggregating specialized experts.</a> Marie Devaine, <a href="index.html">Pierre Gaillard</a>, Yannig Goude, and <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz.</a> Machine Learning, Volume 90, Issue 2, pages 231&ndash;260, 2013.</li>
           </ul>
 
-          <div id="abstract-GaillardGoudeNedellec2015" class="abstract">We sum up the methodology of the team <font style="font-variant: small-caps;">Tololo</font> on the Global Energy Forecasting Competition 2014 (<a href="http://www.drhongtao.com/gefcom">GEFCom2014</a>) for the electric load and electricity price forecasting tracks. During the competition, we used and tested many statistical and machine learning methods such as random forests, gradient boosting machines, or generalized additive models. In this paper, we only present the methods that have shown the best performance. For electric load forecasting, our strategy consisted first in producing a probabilistic forecast of the temperature and then plugging the obtained temperature scenario to produce a probabilistic forecast of the load. Both steps are performed by fitting a quantile generalized additive model (quantGAM). Concerning the electricity price forecasting, we investigate three methods that we used during the competition. The first method follows the spirit of the one used for electric load. The second one is based on combining a set of individual predictors and the last one fit a sparse linear regression on a large set of covariates. We chose to present in this paper these three methods, because they all exhibit good performance and present a nice potential of improvements for future research.</div>
-          <div id="bibtex-GaillardGoudeNedellec2015" class="bibtex"><pre>@article{GaillardGoudeNedellec2015,
-            title={Additive models and robust aggregation for GEFCom2014 probabilistic electric load and electricity price forecasting},
-            author={Gaillard, Pierre and Goude, Yannig and Nedellec, Rapha{\"e}l},
-            journal={International Journal of Forecasting},
-            volume={32},
-            number={3},
-            pages={1038--1050},
-            year={2016},
-            publisher={Elsevier}
-          }</pre></div>
-        </li>
-        <li><a href="https://hal.science/hal-00484940/document/" class="article">Forecasting electricity consumption by aggregating specialized experts.</a> Marie Devaine, <a href="index.html">Pierre Gaillard</a>, Yannig Goude, and <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz.</a> Machine Learning, Volume 90, Issue 2, pages 231&ndash;260, 2013. 
-          <br />
-          <ul class="info">
+          <h5>PhD thesis</h5>
+          <ul>
             <li>
-              <a href="https://hal.science/hal-00484940/document/">
-              HAL</a>
-            </li>
-            <li>
-              <a href="http://arxiv.org/abs/1207.1965">arXiv</a>
-            </li>
-            <li>
-              <a onclick="toggle_visibility('abstract2');"><span id="show-abstract2">Show</span><span id="hide-abstract2" style="display:none;">Hide</span> abstract</a>
-            </li>
-            <li>
-              <a onclick="toggle_visibility('bibtex2');"><span id="show-bibtex2">Show</span><span id="hide-bibtex2" style="display:none;">Hide</span> bibtex</a>
-            </li>
-          </ul>
-
-          <div id="abstract2" class="abstract">We consider the setting of sequential prediction of arbitrary sequences based on specialized experts. We first provide a review of the relevant literature and present two theoretical contributions: a general analysis of the specialist aggregation rule of Freund et al. (1997) and an adaptation of fixed-share rules of Herbster and Warmuth (1998) in this setting. We then apply these rules to the sequential short-term (one-day-ahead) forecasting of electricity consumption; to do so, we consider two data sets, a Slovakian one and a French one, respectively concerned with hourly and half-hourly predictions. We follow a general methodology to perform the stated empirical studies and detail in particular tuning issues of the learning parameters. The introduced aggregation rules demonstrate an improved accuracy on the data sets at hand; the improvements lie in a reduced mean squared error but also in a more robust behavior with respect to large occasional errors.</div>
-
-          <div id="bibtex2" class="bibtex"><pre>@article{DevaineGaillardGoudeStoltz2013,
-            author = {Devaine, Marie and Gaillard, Pierre and Goude, Yannig and Stoltz, Gilles},
-            title = {Forecasting electricity consumption by aggregating specialized experts - A review of the sequential aggregation of specialized experts, with an application to Slovakian and French country-wide one-day-ahead (half-)hourly predictions},
-            journal = {Machine Learning},
-            number = 2,
-            pages = {231--260},
-            volume = 90,
-            year = 2013
-          }</pre>
-        </div>
-      </li>
-    </ul>
-
-    <h5>Book chapters</h5>
-    <ul>
-      <li>
-        <a href="http://www.esaim-proc.org/articles/proc/pdf/2015/04/proc145114.pdf" class="article">Online learning and game theory. A quick overview with recent results and applications.</a> <a href="https://sites.google.com/site/matfaure/">Mathieu Faure</a>, <a href = "index.html">Pierre Gaillard</a>, <a href="http://mescal.imag.fr/membres/bruno.gaujal/">Bruno Gaujal</a>, and <a href="https://sites.google.com/site/vianneyperchet/">Vianney Perchet.</a> ESAIM: Proceedings and Surveys, 51, 246-271, 2015.<br />
-        <ul class="info">
-          <li>
-            <a href="http://www.esaim-proc.org/articles/proc/abs/2015/04/proc145114/proc145114.html">ESAIM</a>
-          </li>
-          <li>
-            <a onclick="toggle_visibility('abstract8');"><span id="show-abstract8">Show</span><span id="hide-abstract8" style="display:none;">Hide</span> abstract</a>
-          </li>
-          <li>   
-            <a onclick="toggle_visibility('bibtex8');"><span id="show-bibtex8">Show</span><span id="hide-bibtex8" style="display:none;">Hide</span> bibtex</a>
-          </li>
-        </ul>
-
-        <div id="abstract8" class="abstract">We study one of the main concept of online learning and sequential decision problem known as regret minimization. We investigate three di erent frameworks, whether data are generated accordingly to some i.i.d. process, or when no assumption whatsoever are made on their generation and, finally, when they are the consequences of some sequential interactions between players. The overall objective is to provide a comprehensive introduction to this domain. In each of these main setups, we define and analyze classical algorithms and we analyze their performances. Finally, we also show that some concepts of equilibria that emerged in game theory are learnable by players using online learning schemes while some other concepts are not learnable.</div>
-        <div id="bibtex8" class="bibtex"><pre>@article{FaureGaillardGaujalPerchet2015,
-          title={Online Learning and Game Theory. A Quick Overview with recent results and applications},
-          author={Faure, Mathieu and Gaillard, Pierre and Gaujal, Bruno and Perchet, Vianney},
-          journal={ESAIM: Proceedings and Surveys},
-          volume={51},
-          pages={246--271},
-          year={2015},
-          publisher={EDP Sciences}
-        }
-      </pre></div>
-    </li>
-    <li>
-      <a href="http://www.springer.com/us/book/9783319187310" class="article">Forecasting electricity consumption by aggregating experts; how to design a good set of experts.</a> <a href = "index.html">Pierre Gaillard</a>, Yannig Goude. In A. Antoniadis et al. editors, Modeling and Stochastic Learning for Forecasting in High Dimensions, volume 217 of Lecture Notes in Statistics, pages 95&ndash;115. Springer, 2015.<br />
-      <ul class="info">
-        <li>
-          <a href="http://www.springer.com/us/book/9783319187310">Springer</a>
-        </li>
-        <li>
-          <a onclick="toggle_visibility('abstract3');"><span id="show-abstract3">Show</span><span id="hide-abstract3" style="display:none;">Hide</span> abstract</a>
-        </li>
-        <li>   
-          <a onclick="toggle_visibility('bibtex3');"><span id="show-bibtex3">Show</span><span id="hide-bibtex3" style="display:none;">Hide</span> bibtex</a>
-        </li>
-      </ul>
-
-      <div id="abstract3" class="abstract">Short-term electricity forecasting has been studied for years at EDF and different forecasting models were developed from various fields of statistics or machine learning (functional data analysis, time series, semi-parametric regression, boosting, bagging). We are interested in the forecasting of France's daily electricity load consumption based on these different approaches. We investigate in this empirical study how to use them to improve prediction accuracy. First, we show how combining members of the original set of forecasts can lead to a significant improvement. Second, we explore how to build various and heterogeneous forecasts  from these models  and analyze how we can aggregate them to get even better predictions.</div>
-      <div id="bibtex3" class="bibtex"><pre>@INCOLLECTION{GaillardGoude2014,
-        author = {Gaillard, Pierre and Goude, Yannig},
-        title = {Forecasting electricity consumption by aggregating experts; 
-        how to design a good set of experts},
-        booktitle = {Modeling and Stochastic Learning for Forecasting in High Dimensions},
-        publisher = {Springer},
-        year = {2015},
-        editor = {Antoniadis, Antoniadis and Brossat, Xavier and Poggi, Jean-Michel},
-        volume = {217},
-        series = {Lecture Notes in Statistics},
-        pages = {95--115},
-        doi = {10.1007/978-3-319-18732-7},
-        url = {www.springer.com/us/book/9783319187310}
-      }
-    </pre></div>
-  </li>
-</ul>
-
-<h5>Others</h5>
-<ul>
-  <li>
-    <a href="https://hal.science/hal-00987803/document/" class="article">A consistent deterministic regression tree for non-parametric prediction of time series.</a> <a href = "index.html">Pierre Gaillard</a>, Paul Baudin.<br />
-    <ul class="info">
-      <li>
-        <a href="https://hal.science/hal-00987803/document/">HAL</a>
-      </li>
-      <li>
-        <a href="http://arxiv.org/abs/1405.1533">arXiv</a>
-      </li>
-      <li>
-        <a onclick="toggle_visibility('abstract-GaillardBaudin2014');"><span id="show-abstract-GaillardBaudin2014">Show</span><span id="hide-abstract-GaillardBaudin2014" style="display:none;">Hide</span> abstract</a>
-      </li>
-      <li>   
-        <a onclick="toggle_visibility('bibtex-GaillardBaudin2014');"><span id="show-bibtex-GaillardBaudin2014">Show</span><span id="hide-GaillardBaudin2014" style="display:none;">Hide</span> bibtex</a>
-      </li>
-    </ul>
-
-    <div id="abstract-GaillardBaudin2014" class="abstract">We study online prediction of bounded stationary ergodic processes. To do so, we consider the setting of prediction of individual sequences and build a deterministic regression tree that performs asymptotically as well as the best L-Lipschitz constant predictors. Then, we show why the obtained regret bound entails the asymptotical optimality with respect to the class of bounded stationary ergodic processes.</div>
-    <div id="bibtex-GaillardBaudin2014" class="bibtex"><pre>@Unpublished{GaillardBaudin2014,
-      author = {Gaillard, Pierre and Baudin, Paul},
-      title = {A consistent deterministic regression tree for non-parametric prediction of time series},
-      year = 2014
-    }</pre></div>
-  </li>
-  <li>
     <a href="https://theses.hal.science/tel-01250027/document/" class="article">Contributions to online robust aggregation: work on the approximation error and on probabilistic
-    forecasting. Applications to forecasting for energy markets.</a> Pierre Gaillard. Université Paris-Sud 11, 2015. <br/>
-    <ul class="info">
-      <li><a onclick="toggle_visibility('abstract-these');"><span id="show-abstract-these">Show</span><span id="hide-abstract-these" style="display:none;">Hide</span> abstract</a>
-      </li>
-      <li>   
-        <a onclick="toggle_visibility('bibtexPhD');"><span id="show-bibtexPhD">Show</span><span id="hide-bibtexPhD" style="display:none;">Hide</span> bibtex</a>
-      </li>
-    </ul>
-    <div id="abstract-these" class="abstract">We are interested in online forecasting of an arbitrary sequence of observations. At each time step, some experts provide predictions of the next observation. Then, we form our prediction by combining the expert forecasts. This is the setting of online robust aggregation of experts. The goal is to ensure a small cumulative regret. In other words, we want that our cumulative loss does not exceed too much the one of the best expert. We are looking for worst-case guarantees: no stochastic assumption on the data to be predicted is made. The sequence of observations is arbitrary. A first objective of this work is to improve the prediction accuracy. We investigate several possibilities. An example is to design fully automatic procedures that can exploit simplicity of the data whenever it is present. Another example relies on working on the expert set so as to improve its diversity. A second objective of this work is to produce probabilistic predictions. We are interested in coupling the point prediction with a measure of uncertainty (i.e., interval forecasts,\dots). The real world applications of the above setting are multiple. Indeed, very few assumptions are made on the data. Besides, online learning that deals with data sequentially is crucial to process big data sets in real time. In this thesis, we carry out for EDF several empirical studies of energy data sets and we achieve good forecasting performance. </div>
-    <div id="bibtexPhD" class="bibtex"><pre>@PHDTHESIS{Gaillard2015,
-      author = {Gaillard, Pierre},
-      title = {Contributions à l'agrégation séquentielle robuste d'experts~: travaux sur l'erreur d'approximation et la prévision en loi. Applications à la prévision pour les marchés de l'énergie},
-      school = {Université Paris-Sud 11}, 
-      year = {2015}
-    }
-  </pre></div>
-  <br />
-</li>
+    forecasting. Applications to forecasting for energy markets.</a> Pierre Gaillard. Université Paris-Sud 11, 2015.</li>
+          </ul>
 
-    <li>
-        <a href="https://arxiv.org/pdf/2102.03594.pdf" class="article">Online nonparametric regression with Sobolev kernels.</a> Oleksandr Zadorozhnyi, Pierre Gaillard, Sebastien Gerschinovitz, Alessandro Rudi.
-    </li>
-</ul>
-
-<h3>Software</h3>
+          <h3>Software</h3>
 <ul>
   <li>
     <a href="opera.html" class="article">Opera: Online Prediction by ExpeRt Aggregation.</a> <a href = "index.html">Pierre Gaillard</a>, Yannig Goude. R package, 2016.  <br />
@@ -745,18 +258,18 @@ PhD students currently supervised
 <ul>
   <li>Pierre Boudart, co-advised with Alessandro Rudi (Inria), 2023-...
   <li>
-    Julien Zhou, industrial PhD with Criteo, co-advised with Julyan Arbel (Inria) and Thibaud Rahier (Criteo), 2022-...
-  </li>
-  <li>
-    <a href="https://biancammoreno.github.io/">Bianca Moreno</a>, industrial PhD with EDF R&D, co-advised with Nadia Oudjane (EDF R&D) and Margaux Brégère (EDF R&D), 2022-...
-  </li>
-  <li>
     Paul Liautaud, co-advised with Olivier Wintenberger, 2022-...
   </li>
 </ul>
 
 Former PhD students and postdocs
-<ul>
+<ul>  
+  <li>
+    Julien Zhou, industrial PhD with Criteo, co-advised with Julyan Arbel (Inria) and Thibaud Rahier (Criteo), 2022-2026
+  </li>
+  <li>
+    <a href="https://biancammoreno.github.io/">Bianca Moreno</a>, industrial PhD with EDF R&D, co-advised with Nadia Oudjane (EDF R&D) and Margaux Brégère (EDF R&D), 2022-2025.  Now research scientist at CFM.  
+  </li>
   <li>
     Camila Fernandez, industrial PhD with Nokia Bell labs, co-advised with Olivier Wintenberger, Chung Shue Chen (Nokia Bell labs), and Alonso Silva (Nokia Bell Labs). 2020-2024.
   </li>
@@ -805,6 +318,11 @@ Here, you can find some reports I wrote during my studies.
 </div>
 </div>
 
+  <footer class="col-sm-9 col-lg-10 col-sm-offset-3 col-lg-offset-2 site-footer">
+    &copy; Pierre Gaillard &nbsp;&middot;&nbsp;
+    <a href="mailto:pierre.gaillard@inria.fr">pierre.gaillard@inria.fr</a> &nbsp;&middot;&nbsp;
+    <a href="https://github.com/Dralliag">GitHub</a>
+  </footer>
   <!-- js scripts here
     // note jquery tag has to go before boostrap -->
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -833,18 +351,22 @@ Here, you can find some reports I wrote during my studies.
   <!-- Navbar include -->
   <script>
   fetch('header.html')
-    .then(function(r){ return r.text(); })
-    .then(function(html){
+    .then(function(r) {
+      if (!r.ok) throw new Error('header.html not found (HTTP ' + r.status + ')');
+      return r.text();
+    })
+    .then(function(html) {
       document.getElementById('navbar-placeholder').innerHTML = html;
+      document.getElementById('navbar-placeholder').classList.add('loaded');
       var page = window.location.pathname.split('/').pop() || 'index.html';
-      if (!page) page = 'index.html';
-      document.querySelectorAll('#navbar-placeholder .nav a').forEach(function(a){
+      document.querySelectorAll('#navbar-placeholder .nav a').forEach(function(a) {
         if (a.getAttribute('href') === page) a.parentElement.classList.add('active');
       });
+    })
+    .catch(function(err) {
+      console.error('Navbar load failed:', err);
     });
   </script>
 </body>
 
 </html>
-
-

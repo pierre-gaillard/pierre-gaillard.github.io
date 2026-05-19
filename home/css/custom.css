@@ -1,57 +1,24 @@
-blockquote {
-  padding: 10.5px 21px;
-  margin: 0 0 21px;
-  font-size: 15px;
-  border-left: 5px solid #ecf0f1;
-}
-blockquote footer,
-blockquote small,
-blockquote .small {
-  display: block;
-  font-size: 70%;
-  line-height: 0;
-  color: #b4bcc2;
-}
-a {
-  color: #355681;
-}
-/*h4 {
-  color: #18bc9c;
-}*/
-ul.info {
-  display: inline;
-  font-size: 8pt;
-  margin: 0;
-}
-ul.info li {
-  display: inline;
-}
-ul.info li:after {
-  content: '·';
-  margin: 0 0.3em;
-}
-ul.info li:last-child:after {
-  content: '';
-  margin-right: 0;
+/* Base */
+html { scroll-behavior: smooth; }
+
+body { line-height: 1.7; }
+
+/* Links */
+a { color: #2980b9; }
+
+/* Content area */
+#content {
+  padding-top: 24px;
+  padding-right: 32px;
+  max-width: 860px;
 }
 
-.navbar-default {
-  background: #2c3e50;
-}
-a.article:link  { color: #18bc9c; text-decoration: none; }
-
-a.article:visited { color: #18bc9c; text-decoration: none; }
-
-a.article:active  { color: #18bc9c; text-decoration: none; }
-
-a.article:hover { color: #18bc9c; text-decoration: underline; }
-
-.abstract {
-  display: none;
-}
-
-.bibtex {
-  display: none;
+/* Headings */
+h4 {
+  color: #2c3e50;
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 4px;
+  margin-top: 1.2em;
 }
 
 h3 {
@@ -65,10 +32,79 @@ h3 {
   color: white;
   border-radius: 0 10px 0 10px;
 }
-pre code {
-  font-size: 12px;
+
+/* Sidebar photo */
+.sidebar-photo {
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.2);
+  display: block;
+  margin: 0 auto;
 }
 
-.pln {
-  color: #2c3e50;
+/* Sidebar separator */
+.navbar-collapse {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 10px;
 }
+
+/* Navbar */
+.navbar-default { background: #2c3e50; }
+
+/* Blockquote */
+blockquote {
+  padding: 10.5px 21px;
+  margin: 0 0 21px;
+  font-size: 15px;
+  border-left: 5px solid #ecf0f1;
+}
+blockquote footer,
+blockquote small,
+blockquote .small {
+  display: block;
+  font-size: 70%;
+  line-height: 1.4;
+  color: #b4bcc2;
+}
+
+/* Research article links */
+a.article:link, a.article:visited, a.article:active { color: #18bc9c; text-decoration: none; }
+a.article:hover { color: #18bc9c; text-decoration: underline; }
+
+/* Abstract / bibtex toggles */
+.abstract, .bibtex { display: none; }
+
+/* Inline info list (teaching page) */
+ul.info { display: inline; font-size: 8pt; margin: 0; }
+ul.info li { display: inline; }
+ul.info li:after { content: '·'; margin: 0 0.3em; }
+ul.info li:last-child:after { content: ''; margin-right: 0; }
+
+/* Resume tables */
+.table-condensed th {
+  width: 130px;
+  white-space: nowrap;
+}
+
+/* Highlight accent (replaces deprecated <font> tags) */
+.highlight { color: #18bc9c; }
+
+/* Page actions (e.g. CV download link) */
+.page-actions {
+  float: right;
+  font-size: 15px;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid #ecf0f1;
+  font-size: 13px;
+  color: #b4bcc2;
+}
+.site-footer a { color: #b4bcc2; }
+.site-footer a:hover { color: #2980b9; }
+
+/* Code */
+pre code { font-size: 12px; }
+.pln { color: #2c3e50; }

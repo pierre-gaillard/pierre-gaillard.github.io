@@ -14,6 +14,12 @@
   <link href="home/css/simple-sidebar.css" rel="stylesheet">
   <link href="home/css/custom.css" rel="stylesheet">
   <style>.highlight { color: #18bc9c; }</style>
+  <link rel="preload" href="header.html" as="fetch" crossorigin="anonymous">
+  <style>
+  #navbar-placeholder { opacity: 0; transition: opacity 0.15s ease; }
+  #navbar-placeholder.loaded { opacity: 1; }
+  </style>
+  <link rel="shortcut icon" type="image/png" href="home/img/pierre_gaillard.png" />
 </head>
 <body>
 
@@ -27,7 +33,7 @@
   <div class="col-sm-9 col-lg-10" id="content">
 
         <h1><i class="fa fa-graduation-cap"></i> Resume
-        <span style="float:right;font-size: 15pt;"><i class="fa fa-download" aria-hidden="true"></i> &nbsp; <a href="doc/Gaillard-cv.pdf">download</a></span>
+        <span class="page-actions"><i class="fa fa-download" aria-hidden="true"></i> &nbsp; <a href="doc/Gaillard-cv.pdf">download</a></span>
         </h1>
    		<hr>
       
@@ -51,7 +57,7 @@
         <td><span class="highlight">Postdoc</span>, Copenhagen University, Copenhagen.</td>
 	   <tr>
 		  <th>2011 - 2015</th>
-     	  <td><span class="highlight">Phd program</span>, EDF R&D, Clamart and École Normale Supérieure, Paris.
+     	  <td><span class="highlight">PhD program</span>, EDF R&D, Clamart and École Normale Supérieure, Paris.
 		 		 	<br/>
 		  		Research interest in machine learning. 
 					</td>
@@ -89,7 +95,7 @@
       <table class="table table-condensed">
 	    <tbody>
 	    <tr>
-					<th>2012&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+					<th>2012</th>
      			<td><span class="highlight"> Research internship with Shie Mannor</span>, Technion University, Haifa, Israel.<br />
 </td>
 	    </tr>
@@ -112,9 +118,57 @@ The Lasso, or how to choose among a large set of variables with few observations
 	    </tbody>
 	    </table>
       
-        <h4>Computer skills</h4>
+        <h4>Awards &amp; distinctions</h4>
+      <table class="table table-condensed">
+        <tbody>
+          <tr>
+            <th>2021</th>
+            <td><span class="highlight">Outstanding Paper Award</span> (&lt;1‰ of submitted papers), NeurIPS 2021.<br>
+            <em>A Continuized View on Nesterov Acceleration for Stochastic Gradient Descent and Randomized Gossip.</em></td>
+          </tr>
+          <tr>
+            <th>2021</th>
+            <td><span class="highlight">2 Spotlight</span> (&lt;3% of submitted papers), NeurIPS 2021.<br>
+            <em>Mixability made efficient: Fast online multiclass logistic regression.</em><br>
+            <em>Online Sign Identification: Minimization of the Number of Errors in Thresholding Bandits.</em></td>
+          </tr>
+          <tr>
+            <th>2018</th>
+            <td><a href="https://forecasters.org/programs/research-awards/tao-hong-award/"><span class="highlight">IJF Tao Hong Award</span></a>, best paper in the International Journal of Forecasting for 2015–2016.</td>
+          </tr>
+          <tr>
+            <th>2016</th>
+            <td><a href="https://www.agence-maths-entreprises.fr/public/pages/activities/prix-de-these/prix2these-2016.html"><span class="highlight">AMIES PhD dissertation award</span></a>, for French industrial PhD in mathematics.</td>
+          </tr>
+          <tr>
+            <th>2016</th>
+            <td><a href="https://www.edf.fr/groupe-edf/innover/rd-un-savoir-faire-mondial/notre-communaute-scientifique/prix-et-trophees-de-la-rd/remise-du-prix-paul-caseau-2016"><span class="highlight">Paul Caseau PhD dissertation award</span></a>, awarded by the French Academy of Technologies and EDF.</td>
+          </tr>
+          <tr>
+            <th>2014</th>
+            <td><span class="highlight">Rank 1</span> in two international machine learning competitions: <a href="https://robjhyndman.com/papers/gefcom2014.pdf">GEFCom2014 Probabilistic Electric Load Forecasting</a> and Crowdanalytix Competition.</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <h4>Grants &amp; funding</h4>
+      <table class="table table-condensed">
+        <tbody>
+          <tr>
+            <th>2025</th>
+            <td><a href="https://miai-cluster.univ-grenoble-alpes.fr/research/chairs/funrl-fundamentals-of-reinforcement-learning--1673415.kjsp"><span class="highlight">FunRL Chair</span></a> — Fundamentals of Reinforcement Learning, <a href="https://miai-cluster.univ-grenoble-alpes.fr/">MIAI Cluster IA</a>, Université Grenoble Alpes.</td>
+          </tr>
+          <tr>
+            <th>2019–2020</th>
+            <td><a href="https://www.prairie-psai.fr/pierre-gaillard/"><span class="highlight">Junior Chair</span></a>, <a href="https://www.prairie-psai.fr/">Prairie-PSAI Institute</a>, Paris.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4>Computer skills</h4>
       
-      	  <ul>
+    <ul>
 	    <li>C, C++, Python, Ocaml</li>
 	    <li>Matlab, R, Maple</li>
 	    <li>HTML, SQL</li>
@@ -124,9 +178,8 @@ The Lasso, or how to choose among a large set of variables with few observations
 	  
       <h4>Languages</h4>
 	  <ul>
-	    <li>French (mother tongue)</li>
+	    <li>French (native speaker)</li>
 	    <li>English (written and spoken)</li>
-	    <li>German (written and spoken)</li>
 	  </ul>   
      
 
@@ -134,6 +187,11 @@ The Lasso, or how to choose among a large set of variables with few observations
   </div>
 </div>
 
+  <footer class="col-sm-9 col-lg-10 col-sm-offset-3 col-lg-offset-2 site-footer">
+    &copy; Pierre Gaillard &nbsp;&middot;&nbsp;
+    <a href="mailto:pierre.gaillard@inria.fr">pierre.gaillard@inria.fr</a> &nbsp;&middot;&nbsp;
+    <a href="https://github.com/Dralliag">GitHub</a>
+  </footer>
   <!-- js scripts here
   // note jquery tag has to go before boostrap -->
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -148,20 +206,23 @@ The Lasso, or how to choose among a large set of variables with few observations
   });
   </script>
   <script src="https://use.fontawesome.com/9f2e7c29fc.js"></script>
-
-
-
   <!-- Navbar include -->
   <script>
   fetch('header.html')
-    .then(function(r){ return r.text(); })
-    .then(function(html){
+    .then(function(r) {
+      if (!r.ok) throw new Error('header.html not found (HTTP ' + r.status + ')');
+      return r.text();
+    })
+    .then(function(html) {
       document.getElementById('navbar-placeholder').innerHTML = html;
+      document.getElementById('navbar-placeholder').classList.add('loaded');
       var page = window.location.pathname.split('/').pop() || 'index.html';
-      if (!page) page = 'index.html';
-      document.querySelectorAll('#navbar-placeholder .nav a').forEach(function(a){
+      document.querySelectorAll('#navbar-placeholder .nav a').forEach(function(a) {
         if (a.getAttribute('href') === page) a.parentElement.classList.add('active');
       });
+    })
+    .catch(function(err) {
+      console.error('Navbar load failed:', err);
     });
   </script>
 </body>

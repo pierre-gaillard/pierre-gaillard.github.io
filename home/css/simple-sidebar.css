@@ -98,13 +98,13 @@
   }
 
   .navbar-fixed-side .navbar-nav .dropdown-menu>.active>a{
-    background-color:#e7e7e7;
-    color:#555
+    background-color:rgba(255,255,255,0.15);
+    color:#fff
   }
 
   .navbar-fixed-side .navbar-nav>li>a:hover,.navbar-fixed-side .navbar-nav>li>a:focus,.navbar-fixed-side .navbar-nav .dropdown-menu>li>a:hover,.navbar-fixed-side .navbar-nav .dropdown-menu>li>a:focus{
-    background-color:#f0f0f0;
-    color:#333
+    background-color:rgba(255,255,255,0.1);
+    color:#fff
   }
 
   .navbar-fixed-side .dropdown>.dropdown-toggle,.navbar-fixed-side .dropdown-menu>.dropdown-header{

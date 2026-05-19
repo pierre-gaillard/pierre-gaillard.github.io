@@ -14,6 +14,11 @@
   <link href="home/css/simple-sidebar.css" rel="stylesheet">
   <link href="home/css/custom.css" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="home/img/pierre_gaillard.png" />
+  <link rel="preload" href="header.html" as="fetch" crossorigin="anonymous">
+  <style>
+  #navbar-placeholder { opacity: 0; transition: opacity 0.15s ease; }
+  #navbar-placeholder.loaded { opacity: 1; }
+  </style>
 </head>
 
 <body>
@@ -25,9 +30,10 @@
     <div class="col-sm-9 col-lg-10" id="content">
       
       <!-- your page content -->
-      <h1>Welcome</h1>
+      <h1>Pierre Gaillard</h1>
       <hr>
-      <p>I am a researcher at <a href="http://www.inria.fr/">INRIA</a>, member of the <a href="https://thoth.inrialpes.fr/">THOTH</a> project-team, which is a joint team of <a href="https://www.inria.fr/fr/centre-inria-grenoble-rhone-alpes">INRIA Grenoble - Rhône-Alpes</a> and the <a href="https://ljk.imag.fr">Laboratoire Jean Kuntzmann</a>. I am working on theoretical online learning and industrial applications.</p>
+      <p>I am a researcher (CRCN) at <a href="https://www.inria.fr/">Inria</a>, member of the <a href="https://thoth.inrialpes.fr/">THOTH</a> team — a joint team of <a href="https://www.inria.fr/fr/centre-inria-grenoble-rhone-alpes">Inria Grenoble – Rhône-Alpes</a> and the <a href="https://ljk.imag.fr">Laboratoire Jean Kuntzmann</a>.</p>
+      <p>My research focuses on statistical learning theory, with a particular emphasis on <strong>online learning</strong>: sequential prediction and aggregation of experts, bandit problems (stochastic, adversarial, sleeping, dueling), online convex optimisation, and nonparametric regression. I also work on applications to reinforcement learning and demand forecasting, and I develop the <a href="opera.html">Opera</a> R package for online prediction by expert aggregation.</p>
       <br/>
       <blockquote>
         <p>Success is the ability to go from one failure to another with no loss of enthusiasm.</p>
@@ -48,8 +54,12 @@
               function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
               </script>
             </p>
-            <h4><i class="fa fa-phone fa-fw"></i> Phone</h4>
-            <p>(+33) 1 80 49 43 64</p>
+          <h4><i class="fa fa-search fa-fw"></i> Profiles</h4>
+          <p>
+            <a href="https://scholar.google.com/citations?user=-CPaGaEAAAAJ&hl=en">Google Scholar</a><br>
+            <a href="https://orcid.org/0000-0001-6777-6127">ORCID</a><br>
+            <a href="https://github.com/Dralliag">GitHub</a>
+          </p>
           </div>
           <div class="col-sm-6 col-md-6 col-lg-6">
             <h4><i class="fa fa-home fa-fw"></i> Address</h4>
@@ -63,6 +73,11 @@
     </div>
   </div>
 
+  <footer class="col-sm-9 col-lg-10 col-sm-offset-3 col-lg-offset-2 site-footer">
+    &copy; Pierre Gaillard &nbsp;&middot;&nbsp;
+    <a href="mailto:pierre.gaillard@inria.fr">pierre.gaillard@inria.fr</a> &nbsp;&middot;&nbsp;
+    <a href="https://github.com/Dralliag">GitHub</a>
+  </footer>
   <!-- js scripts here
   // note jquery tag has to go before boostrap -->
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -77,19 +92,23 @@
   });
   </script>
   <script src="https://use.fontawesome.com/9f2e7c29fc.js"></script>
-
-
   <!-- Navbar include -->
   <script>
   fetch('header.html')
-    .then(function(r){ return r.text(); })
-    .then(function(html){
+    .then(function(r) {
+      if (!r.ok) throw new Error('header.html not found (HTTP ' + r.status + ')');
+      return r.text();
+    })
+    .then(function(html) {
       document.getElementById('navbar-placeholder').innerHTML = html;
+      document.getElementById('navbar-placeholder').classList.add('loaded');
       var page = window.location.pathname.split('/').pop() || 'index.html';
-      if (!page) page = 'index.html';
-      document.querySelectorAll('#navbar-placeholder .nav a').forEach(function(a){
+      document.querySelectorAll('#navbar-placeholder .nav a').forEach(function(a) {
         if (a.getAttribute('href') === page) a.parentElement.classList.add('active');
       });
+    })
+    .catch(function(err) {
+      console.error('Navbar load failed:', err);
     });
   </script>
 </body>
