@@ -33,12 +33,12 @@
       }
     </script>
 
-    <link rel="preload" href="header.html" as="fetch" crossorigin="anonymous">
-  <style>
-  #navbar-placeholder { opacity: 0; transition: opacity 0.15s ease; }
-  #navbar-placeholder.loaded { opacity: 1; }
-  </style>
   <link rel="shortcut icon" type="image/png" href="home/img/pierre_gaillard.png" />
+  <style>
+  /* Author links blend with body text; underline appears on hover only */
+  a.author-link { color: inherit; text-decoration: none; }
+  a.author-link:hover { text-decoration: underline; }
+  </style>
 </head>
   <body>
 
@@ -46,8 +46,32 @@
       <div class="row">
 
         <!-- header sidebar -->
-    <!-- Navbar loaded dynamically from header.html -->
-    <div id="navbar-placeholder"></div>
+    <div class="col-sm-3 col-lg-2">
+  <nav class="navbar navbar-default navbar-fixed-side">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Pierre Gaillard</a>
+      </div>
+      <div class="navbar-collapse collapse" id="myNav">
+        <p class="text-center hidden-xs">
+          <a href="index.html"><img src="home/img/pierre_gaillard.png" alt="Pierre Gaillard" class="sidebar-photo" width="150" height="150"/></a>
+        </p>
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">About me</a></li>
+          <li class="active"><a href="research.html">Research</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="resume.html">Resume</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
 
         <div class="col-sm-9 col-lg-10" id="content">
           <h1>
@@ -56,7 +80,7 @@
           </h1>
           <hr>
           <p>
-            I work on statistical learning theory with a particular focus on <strong>online learning</strong>: sequential prediction and aggregation of experts, bandit problems (stochastic, adversarial, sleeping, dueling), online convex optimisation, nonparametric regression, and applications to reinforcement learning and demand forecasting. My <a href="./doc/theseGaillard.pdf">PhD thesis</a>, supervised by Yannig Goude and <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz</a>, focused on prediction of individual sequences.
+            I work on statistical learning theory with a particular focus on <strong>online learning</strong>: sequential prediction and aggregation of experts, bandit problems (stochastic, adversarial, sleeping, dueling), online convex optimisation, nonparametric regression, and applications to reinforcement learning and demand forecasting. My <a href="./doc/theseGaillard.pdf">PhD thesis</a>, supervised by Yannig Goude and <a href="http://stoltz.perso.math.cnrs.fr/" class="author-link">Gilles Stoltz</a>, focused on prediction of individual sequences.
           </p>
           <p>
             <a href="https://scholar.google.com/citations?user=-CPaGaEAAAAJ&hl=en">Google Scholar</a> &nbsp;&middot;&nbsp;
@@ -68,158 +92,158 @@
           
                     <h3>Publications</h3>
 
-<h5>Bandits and online decision making</h5>
+<h4>Bandits and online decision making</h4>
           <ul>
             <li>
-              <a href="https://arxiv.org/pdf/2507.05306" class="article">Enjoying Non-linearity in Multinomial Logistic Bandits.</a> Pierre Boudart, Pierre Gaillard, Alessandro Rudi.
+              <a href="https://arxiv.org/pdf/2507.05306" class="article">Enjoying Non-linearity in Multinomial Logistic Bandits.</a> Pierre Boudart, Pierre Gaillard, <a href="https://www.di.ens.fr/~rudi/" class="author-link">Alessandro Rudi</a>.
             </li>
             <li>
-              <a href="https://openreview.net/pdf?id=kx8i1yfkRX" class="article">Finally Rank-Breaking Conquers MNL Bandits: Optimal and Efficient Algorithms for MNL Assortment.</a> Aadirupa Saha and Pierre Gaillard. ICLR, 2025. 
+              <a href="https://openreview.net/pdf?id=kx8i1yfkRX" class="article">Finally Rank-Breaking Conquers MNL Bandits: Optimal and Efficient Algorithms for MNL Assortment.</a> <a href="https://aadirupa.github.io/" class="author-link">Aadirupa Saha</a> and Pierre Gaillard. ICLR, 2025. 
             </li>
             <li>
-              <a href="https://arxiv.org/pdf/2410.08578" class="article">Logarithmic Regret for Unconstrained Submodular Maximization Stochastic Bandit.</a> <a href="https://jlnzhou.github.io/">Julien Zhou</a>, Pierre Gaillard, Thibaud Rahier, and Julyan Arbel. ALT, 2025. 
+              <a href="https://arxiv.org/pdf/2410.08578" class="article">Logarithmic Regret for Unconstrained Submodular Maximization Stochastic Bandit.</a> <a href="https://jlnzhou.github.io/" class="author-link">Julien Zhou</a>, Pierre Gaillard, Thibaud Rahier, and <a href="https://www.julyanarbel.com/" class="author-link">Julyan Arbel</a>. ALT, 2025. 
             </li>
             <li>
-              <a href="https://arxiv.org/pdf/2402.15171.pdf" class = "article">Covariance-Adaptive Least-Squares Algorithm for Stochastic Combinatorial Semi-Bandits.</a> <a href="https://jlnzhou.github.io/">Julien Zhou</a>, Pierre Gaillard, Thibaud Rahier, Houssam Zenati, and Julyan Arbel. NeurIPS, 2024.
+              <a href="https://arxiv.org/pdf/2402.15171.pdf" class = "article">Covariance-Adaptive Least-Squares Algorithm for Stochastic Combinatorial Semi-Bandits.</a> <a href="https://jlnzhou.github.io/" class="author-link">Julien Zhou</a>, Pierre Gaillard, Thibaud Rahier, <a href="https://houssamzenati.github.io/" class="author-link">Houssam Zenati</a>, and <a href="https://www.julyanarbel.com/" class="author-link">Julyan Arbel</a>. NeurIPS, 2024.
             </li>
             <li>
-              <a href="https://arxiv.org/pdf/2210.14998.pdf" class="article">One Arrow, Two Kills: An Unified Framework for Achieving Optimal Regret Guarantees in Sleeping Bandits.</a> Pierre Gaillard, Aadirupa Saha and Soham Dan. AISTATS, 2023.
+              <a href="https://arxiv.org/pdf/2210.14998.pdf" class="article">One Arrow, Two Kills: An Unified Framework for Achieving Optimal Regret Guarantees in Sleeping Bandits.</a> Pierre Gaillard, <a href="https://aadirupa.github.io/" class="author-link">Aadirupa Saha</a> and Soham Dan. AISTATS, 2023.
             </li>
             <li>
-                <a href="https://arxiv.org/pdf/2202.06694.pdf" class="article"> Versatile Dueling Bandits: Best-of-both-World Analyses for Online Learning from Preferences.</a> Aadirupa Saha, Pierre Gaillard. ICML, 2022.
+                <a href="https://arxiv.org/pdf/2202.06694.pdf" class="article"> Versatile Dueling Bandits: Best-of-both-World Analyses for Online Learning from Preferences.</a> <a href="https://aadirupa.github.io/" class="author-link">Aadirupa Saha</a>, Pierre Gaillard. ICML, 2022.
             </li>
             <li>
-                <a href="https://arxiv.org/pdf/2202.05638.pdf" class="article">Efficient Kernel UCB for Contextual Bandits.</a> Houssam Zenati, Alberto Bietti, Eustache Diemert, Julien Mairal, Matthieu Martin, Pierre Gaillard. AISTATS, 2022. 
+                <a href="https://arxiv.org/pdf/2202.05638.pdf" class="article">Efficient Kernel UCB for Contextual Bandits.</a> <a href="https://houssamzenati.github.io/" class="author-link">Houssam Zenati</a>, <a href="https://alberto.bietti.me/" class="author-link">Alberto Bietti</a>, Eustache Diemert, <a href="https://lear.inrialpes.fr/people/mairal/" class="author-link">Julien Mairal</a>, Matthieu Martin, Pierre Gaillard. AISTATS, 2022. 
             </li>
             <li>
-              <a href="https://arxiv.org/pdf/2107.02274.pdf" class="article">Dueling Bandits with Adversarial Sleeping.</a> Aadirupa Saha, Pierre Gaillard. NeurIPS, 2021. 
+              <a href="https://arxiv.org/pdf/2107.02274.pdf" class="article">Dueling Bandits with Adversarial Sleeping.</a> <a href="https://aadirupa.github.io/" class="author-link">Aadirupa Saha</a>, Pierre Gaillard. NeurIPS, 2021. 
             </li>
             <li>
-              <a href="https://hal.inria.fr/hal-03363014/document" class="article">Online Sign Identification: Minimization of the Number of Errors in Thresholding Bandits.</a> Reda Ouhamma, Rémy Degenne, Vianney Perchet, and Pierre Gaillard. NeurIPS (Spotlight, &lt;3% of submitted papers), 2021.
+              <a href="https://hal.inria.fr/hal-03363014/document" class="article">Online Sign Identification: Minimization of the Number of Errors in Thresholding Bandits.</a> Reda Ouhamma, <a href="https://remydegenne.github.io/" class="author-link">Rémy Degenne</a>, <a href="https://sites.google.com/site/vianneyperchet/" class="author-link">Vianney Perchet</a>, and Pierre Gaillard. NeurIPS (Spotlight, &lt;3% of submitted papers), 2021.
             </li>
             <li>
-              <a href="https://arxiv.org/abs/2004.06248" class = "article">Improved Sleeping Bandits with Stochastic Actions Sets and Adversarial Rewards.</a> Aadirupa Saha, <a href="index.html">Pierre Gaillard</a>, <a href="http://researchers.lille.inria.fr/~valko/hp/">Michal Valko.</a> ICML, 2020.</li>
+              <a href="https://arxiv.org/abs/2004.06248" class = "article">Improved Sleeping Bandits with Stochastic Actions Sets and Adversarial Rewards.</a> <a href="https://aadirupa.github.io/" class="author-link">Aadirupa Saha</a>, <a href="index.html" class="author-link">Pierre Gaillard</a>, <a href="http://researchers.lille.inria.fr/~valko/hp/" class="author-link">Michal Valko.</a> ICML, 2020.</li>
             <li>
-              <a href="https://arxiv.org/abs/1902.09917" class = "article">Efficient online learning with Kernels for adversarial large scale problems.</a> Rémi Jézéquel, <a href="index.html">Pierre Gaillard</a>, <a href="https://www.di.ens.fr/~rudi/">Alessandro Rudi.</a> NeurIPS, 2019.</li>
+              <a href="https://arxiv.org/abs/1902.09917" class = "article">Efficient online learning with Kernels for adversarial large scale problems.</a> Rémi Jézéquel, <a href="index.html" class="author-link">Pierre Gaillard</a>, <a href="https://www.di.ens.fr/~rudi/" class="author-link">Alessandro Rudi.</a> NeurIPS, 2019.</li>
             <li>
-              <a href="https://arxiv.org/abs/1901.09532" class="article">Target Tracking for Contextual Bandits: Application to Demand Side Management.</a> Margaux Brégère, <a href="index.html">Pierre Gaillard</a>, Yannig Goude, <a href="http://stoltz.perso.math.cnrs.fr">Gilles Stoltz.</a> ICML, 2019.</li>
+              <a href="https://arxiv.org/abs/1901.09532" class="article">Target Tracking for Contextual Bandits: Application to Demand Side Management.</a> <a href="https://margauxbregere.github.io/" class="author-link">Margaux Brégère</a>, <a href="index.html" class="author-link">Pierre Gaillard</a>, Yannig Goude, <a href="http://stoltz.perso.math.cnrs.fr" class="author-link">Gilles Stoltz.</a> ICML, 2019.</li>
           </ul>
 
-          <h5>Online learning and aggregation</h5>
+          <h4>Online learning and aggregation</h4>
           <ul>
             <li>
-              <a href="https://hal.science/hal-05097004/document" class="article">Optimised projection-free algorithms for online learning: construction and worst-case analysis.</a> Julien Weibel, Pierre Gaillard, Wouter M Koolen, Adrien Taylor. AISTATS 2026. 
+              <a href="https://hal.science/hal-05097004/document" class="article">Optimised projection-free algorithms for online learning: construction and worst-case analysis.</a> <a href="https://www.normalesup.org/~jweibel/" class="author-link">Julien Weibel</a>, Pierre Gaillard, <a href="https://wouterkoolen.info/" class="author-link">Wouter M Koolen</a>, <a href="https://adrientaylor.github.io/" class="author-link">Adrien Taylor</a>. AISTATS 2026. 
             </li>
             <li>
-              <a href="https://arxiv.org/pdf/2209.13932.pdf" class="article">Efficient and Near-Optimal Online Portfolio Selection.</a> Rémi Jézéquel, Dmitrii M. Ostrovskii, Pierre Gaillard.  Mathematics of Operations Research. 2025.</li>
+              <a href="https://arxiv.org/pdf/2209.13932.pdf" class="article">Efficient and Near-Optimal Online Portfolio Selection.</a> Rémi Jézéquel, <a href="https://ostrodmit.github.io/" class="author-link">Dmitrii M. Ostrovskii</a>, Pierre Gaillard.  Mathematics of Operations Research. 2025.</li>
             <li> 
-              <a href="https://arxiv.org/pdf/2406.12366" class="article">Structured prediction in online learning.</a> Pierre Boudard, Pierre Gaillard, and Alessandro Rudi.
+              <a href="https://arxiv.org/pdf/2406.12366" class="article">Structured prediction in online learning.</a> Pierre Boudard, Pierre Gaillard, and <a href="https://www.di.ens.fr/~rudi/" class="author-link">Alessandro Rudi</a>.
             </li>
             <li>
-              <a href="https://hal.science/hal-03370530/document" class="article">Mixability made efficient: Fast online multiclass logistic regression.</a> Rémi Jézéquel, Pierre Gaillard, and Alessandro Rudi. NeurIPS (Spotlight, &lt;3% of submitted papers), 2021.
+              <a href="https://hal.science/hal-03370530/document" class="article">Mixability made efficient: Fast online multiclass logistic regression.</a> Rémi Jézéquel, Pierre Gaillard, and <a href="https://www.di.ens.fr/~rudi/" class="author-link">Alessandro Rudi</a>. NeurIPS (Spotlight, &lt;3% of submitted papers), 2021.
             </li>
             <li>
-              <a href="https://arxiv.org/abs/2003.08109" class = "article">Efficient improper learning for online logistic regression.</a> Rémi Jézéquel, <a href="index.html">Pierre Gaillard</a>, <a href="https://www.di.ens.fr/~rudi/">Alessandro Rudi.</a> COLT, 2020.
+              <a href="https://arxiv.org/abs/2003.08109" class = "article">Efficient improper learning for online logistic regression.</a> Rémi Jézéquel, <a href="index.html" class="author-link">Pierre Gaillard</a>, <a href="https://www.di.ens.fr/~rudi/" class="author-link">Alessandro Rudi.</a> COLT, 2020.
             </li>
             <li>
               <a href="https://arxiv.org/abs/1805.11386" class="article">Uniform regret bounds over R^d for the sequential linear regression problem with the square loss.</a>
-              <a href = "index.html">Pierre Gaillard</a>,
-              <a href="http://www.math.univ-toulouse.fr/~sgerchin/">Sébastien Gerchinovitz</a>,
+              <a href = "index.html" class="author-link">Pierre Gaillard</a>,
+              <a href="http://www.math.univ-toulouse.fr/~sgerchin/" class="author-link">Sébastien Gerchinovitz</a>,
               Malo Huard,
-              <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz.</a> ALT, 2019.</li>
+              <a href="http://stoltz.perso.math.cnrs.fr/" class="author-link">Gilles Stoltz.</a> ALT, 2019.</li>
             <li>
-              <a href="https://arxiv.org/abs/1805.09174" class="article">Efficient online algorithms for fast-rate regret bounds under sparsity.</a> <a href = "index.html">Pierre Gaillard</a>, <a href="http://wintenberger.fr/index.html">Olivier Wintenberger.</a> NeurIPS, 2018.</a></li>
+              <a href="https://arxiv.org/abs/1805.09174" class="article">Efficient online algorithms for fast-rate regret bounds under sparsity.</a> <a href = "index.html" class="author-link">Pierre Gaillard</a>, <a href="http://wintenberger.fr/index.html" class="author-link">Olivier Wintenberger.</a> NeurIPS, 2018.</a></li>
             <li>
-            <a href="http://arxiv.org/abs/1610.05022" class="article">Sparse Accelerated Exponential Weights.</a> <a href = "index.html">Pierre Gaillard</a>, <a href="http://wintenberger.fr/index.html">Olivier Wintenberger.</a> <a href="http://www.aistats.org">AISTATS, 2017.</a></li>
+            <a href="http://arxiv.org/abs/1610.05022" class="article">Sparse Accelerated Exponential Weights.</a> <a href = "index.html" class="author-link">Pierre Gaillard</a>, <a href="http://wintenberger.fr/index.html" class="author-link">Olivier Wintenberger.</a> AISTATS, 2017.</li>
             <li>
-        <a href="http://www.esaim-proc.org/articles/proc/pdf/2015/04/proc145114.pdf" class="article">Online learning and game theory. A quick overview with recent results and applications.</a> <a href="https://sites.google.com/site/matfaure/">Mathieu Faure</a>, <a href = "index.html">Pierre Gaillard</a>, <a href="http://mescal.imag.fr/membres/bruno.gaujal/">Bruno Gaujal</a>, and <a href="https://sites.google.com/site/vianneyperchet/">Vianney Perchet.</a> ESAIM: Proceedings and Surveys, 51, 246-271, 2015.</li>
+        <a href="http://www.esaim-proc.org/articles/proc/pdf/2015/04/proc145114.pdf" class="article">Online learning and game theory. A quick overview with recent results and applications.</a> <a href="https://sites.google.com/site/matfaure/" class="author-link">Mathieu Faure</a>, <a href = "index.html" class="author-link">Pierre Gaillard</a>, <a href="http://mescal.imag.fr/membres/bruno.gaujal/" class="author-link">Bruno Gaujal</a>, and <a href="https://sites.google.com/site/vianneyperchet/" class="author-link">Vianney Perchet.</a> ESAIM: Proceedings and Surveys, 51, 246-271, 2015.</li>
             <li>
             <a href="http://arxiv.org/abs/1402.2044" class="article">A second-order bound with excess losses.</a>
-            <a href = "index.html">Pierre Gaillard</a>, <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz</a>, <a href="http://www.timvanerven.nl">Tim van Erven.</a> COLT, 2014.</li>
+            <a href = "index.html" class="author-link">Pierre Gaillard</a>, <a href="http://stoltz.perso.math.cnrs.fr/" class="author-link">Gilles Stoltz</a>, <a href="http://www.timvanerven.nl" class="author-link">Tim van Erven.</a> COLT, 2014.</li>
             <li>
-            <a href="http://arxiv.org/abs/1202.3323" class="article">Mirror descend meets fixed share (and feels no regret).</a> <a href="http://homes.di.unimi.it/~cesabian/">Nicolò Cesa-Bianchi</a>, <a href = "index.html">Pierre Gaillard</a>, <a href="http://econ.upf.edu/~lugosi/">Gàbor Lugosi</a>, and <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz.</a> NIPS, 2012.</li>
+            <a href="http://arxiv.org/abs/1202.3323" class="article">Mirror descend meets fixed share (and feels no regret).</a> <a href="http://homes.di.unimi.it/~cesabian/" class="author-link">Nicolò Cesa-Bianchi</a>, <a href = "index.html" class="author-link">Pierre Gaillard</a>, <a href="http://econ.upf.edu/~lugosi/" class="author-link">Gàbor Lugosi</a>, and <a href="http://stoltz.perso.math.cnrs.fr/" class="author-link">Gilles Stoltz.</a> NIPS, 2012.</li>
           </ul>
 
-          <h5>Nonparametric methods</h5>
+          <h4>Nonparametric methods</h4>
           <ul>
             <li>
-              <a href="https://arxiv.org/pdf/2505.19741" class="article">Minimax Adaptive Online Nonparametric Regression over Besov spaces.</a> Paul Liautaud, Pierre Gaillard, Olivier Wintenberger.
+              <a href="https://arxiv.org/pdf/2505.19741" class="article">Minimax Adaptive Online Nonparametric Regression over Besov spaces.</a> Paul Liautaud, Pierre Gaillard, <a href="http://wintenberger.fr/index.html" class="author-link">Olivier Wintenberger</a>.
             </li>
             <li>
-              <a href="https://raw.githubusercontent.com/mlresearch/v272/main/assets/liautaud25a/liautaud25a.pdf" class="article">Minimax-optimal and Locally-adaptive Online Nonparametric Regression.</a> Paul Liautaud, Pierre Gaillard, Olivier Wintenberger. ALT, 2025. 
+              <a href="https://raw.githubusercontent.com/mlresearch/v272/main/assets/liautaud25a/liautaud25a.pdf" class="article">Minimax-optimal and Locally-adaptive Online Nonparametric Regression.</a> Paul Liautaud, Pierre Gaillard, <a href="http://wintenberger.fr/index.html" class="author-link">Olivier Wintenberger</a>. ALT, 2025. 
             </li>
             <li> 
-              <a href="https://arxiv.org/pdf/2309.07530.pdf" class="article">Adaptive approximation of monotone functions.</a> Pierre Gaillard, Sébastien Gerchinovitz, Etienne de Montbrun.
+              <a href="https://arxiv.org/pdf/2309.07530.pdf" class="article">Adaptive approximation of monotone functions.</a> Pierre Gaillard, <a href="http://www.math.univ-toulouse.fr/~sgerchin/" class="author-link">Sébastien Gerchinovitz</a>, Etienne de Montbrun.
             </li>
             <li>
-        <a href="https://arxiv.org/pdf/2102.03594.pdf" class="article">Online nonparametric regression with Sobolev kernels.</a> Oleksandr Zadorozhnyi, Pierre Gaillard, Sebastien Gerschinovitz, Alessandro Rudi.
+        <a href="https://arxiv.org/pdf/2102.03594.pdf" class="article">Online nonparametric regression with Sobolev kernels.</a> Oleksandr Zadorozhnyi, Pierre Gaillard, <a href="http://www.math.univ-toulouse.fr/~sgerchin/" class="author-link">Sebastien Gerschinovitz</a>, <a href="https://www.di.ens.fr/~rudi/" class="author-link">Alessandro Rudi</a>.
     </li>
             <li>
-              <a href="https://arxiv.org/abs/2006.08212" class = "article">Tight Nonparametric Convergence Rates for Stochastic Gradient Descent under the Noiseless Linear Model.</a> <a href="https://raphael-berthier.github.io/">Raphaël Berthier</a>, <a href="http://www.di.ens.fr/~fbach/">Francis Bach</a>, <a href = "index.html">Pierre Gaillard.</a> NeurIPS, 2020.
+              <a href="https://arxiv.org/abs/2006.08212" class = "article">Tight Nonparametric Convergence Rates for Stochastic Gradient Descent under the Noiseless Linear Model.</a> <a href="https://raphael-berthier.github.io/" class="author-link">Raphaël Berthier</a>, <a href="http://www.di.ens.fr/~fbach/" class="author-link">Francis Bach</a>, <a href = "index.html" class="author-link">Pierre Gaillard.</a> NeurIPS, 2020.
             </li>
             <li>
               <a href="https://arxiv.org/abs/1702.08211" class="article">Online nonparametric learning, chaining, and the role of partial feedback.</a> 
-              <a href="http://cesa-bianchi.di.unimi.it/">Nicolò Cesa-Bianchi</a>, 
-              <a href = "index.html">Pierre Gaillard</a>, 
-              <a href="https://sites.google.com/view/cgentile/">Claudio Gentile</a>,
-              <a href="http://www.math.univ-toulouse.fr/~sgerchin/">Sébastien Gerchinovitz.</a> COLT, 2017.</li>
+              <a href="http://cesa-bianchi.di.unimi.it/" class="author-link">Nicolò Cesa-Bianchi</a>, 
+              <a href = "index.html" class="author-link">Pierre Gaillard</a>, 
+              <a href="https://sites.google.com/view/cgentile/" class="author-link">Claudio Gentile</a>,
+              <a href="http://www.math.univ-toulouse.fr/~sgerchin/" class="author-link">Sébastien Gerchinovitz.</a> COLT, 2017.</li>
             <li>
-            <a href="http://arxiv.org/abs/1502.07697" class="article">A Chaining Algorithm for Online Nonparametric Regression.</a> <a href = "index.html">Pierre Gaillard</a>, <a href="http://www.math.univ-toulouse.fr/~sgerchin/">Sébastien Gerchinovitz.</a> COLT, 2015.</li>
+            <a href="http://arxiv.org/abs/1502.07697" class="article">A Chaining Algorithm for Online Nonparametric Regression.</a> <a href = "index.html" class="author-link">Pierre Gaillard</a>, <a href="http://www.math.univ-toulouse.fr/~sgerchin/" class="author-link">Sébastien Gerchinovitz.</a> COLT, 2015.</li>
             <li>
-    <a href="http://arxiv.org/abs/1405.1533" class="article">A consistent deterministic regression tree for non-parametric prediction of time series.</a> <a href = "index.html">Pierre Gaillard</a>, Paul Baudin.</li>
+    <a href="http://arxiv.org/abs/1405.1533" class="article">A consistent deterministic regression tree for non-parametric prediction of time series.</a> <a href = "index.html" class="author-link">Pierre Gaillard</a>, Paul Baudin.</li>
           </ul>
 
-          <h5>Optimisation</h5>
+          <h4>Optimisation</h4>
           <ul>
             <li>
-              <a href="https://arxiv.org/pdf/2106.07644.pdf" class="article">A Continuized View on Nesterov Acceleration for Stochastic Gradient Descent and Randomized Gossip.</a> Mathieu Even, Raphaël Berthier, Francis Bach, Nicolas Flammarion, Pierre Gaillard, Hadrien Hendrikx, Laurent Massoulié, Adrien Taylor. NeurIPS (<a href="https://nips.cc/virtual/2021/poster/28427">Outstanding paper award</a>, &lt;1‰ of submitted papers), 2021. 
+              <a href="https://arxiv.org/pdf/2106.07644.pdf" class="article">A Continuized View on Nesterov Acceleration for Stochastic Gradient Descent and Randomized Gossip.</a> <a href="https://mathieueven.netlify.app/" class="author-link">Mathieu Even</a>, <a href="https://raphael-berthier.github.io/" class="author-link">Raphaël Berthier</a>, <a href="http://www.di.ens.fr/~fbach/" class="author-link">Francis Bach</a>, <a href="https://people.epfl.ch/nicolas.flammarion" class="author-link">Nicolas Flammarion</a>, Pierre Gaillard, <a href="https://www.di.ens.fr/hadrien.hendrikx/" class="author-link">Hadrien Hendrikx</a>, <a href="https://www.di.ens.fr/laurent.massoulie/" class="author-link">Laurent Massoulié</a>, <a href="https://adrientaylor.github.io/" class="author-link">Adrien Taylor</a>. NeurIPS (<a href="https://nips.cc/virtual/2021/poster/28427">Outstanding paper award</a>, &lt;1‰ of submitted papers), 2021. 
             </li>
             <li>
-              <a href="https://arxiv.org/abs/1805.08531" class="article">Accelerated Gossip in Networks of Given Dimension using Jacobi Polynomial Iterations.</a> <a href="https://raphael-berthier.github.io/">Raphaël Berthier</a>, <a href="http://www.di.ens.fr/~fbach/">Francis Bach</a>, <a href = "index.html">Pierre Gaillard</a>, SIAM Journal on Mathematics of Data Science. Volume 2, Issue 1, 2020.</li>
+              <a href="https://arxiv.org/abs/1805.08531" class="article">Accelerated Gossip in Networks of Given Dimension using Jacobi Polynomial Iterations.</a> <a href="https://raphael-berthier.github.io/" class="author-link">Raphaël Berthier</a>, <a href="http://www.di.ens.fr/~fbach/" class="author-link">Francis Bach</a>, <a href = "index.html" class="author-link">Pierre Gaillard</a>, SIAM Journal on Mathematics of Data Science. Volume 2, Issue 1, 2020.</li>
           </ul>
 
-          <h5>Reinforcement learning</h5>
+          <h4>Reinforcement learning</h4>
           <ul>
             <li>
-              <a href="https://arxiv.org/abs/2601.07492" class="article">Online Markov Decision Processes with Terminal Law Constraints.</a> <a href="https://biancammoreno.github.io/">Bianca Marin Moreno</a>, Margaux Brégère, Pierre Gaillard, Nadia Oudjane. ALT 2026.
+              <a href="https://arxiv.org/abs/2601.07492" class="article">Online Markov Decision Processes with Terminal Law Constraints.</a> <a href="https://biancammoreno.github.io/" class="author-link">Bianca Marin Moreno</a>, <a href="https://margauxbregere.github.io/" class="author-link">Margaux Brégère</a>, Pierre Gaillard, <a href="https://fime-lab.org/oudjane-nadia/" class="author-link">Nadia Oudjane</a>. ALT 2026.
             </li>
             <li>
-              <a href="https://hal.science/hal-05059067/document"  class="article">Online Episodic Convex Reinforcement Learning.</a> <a href="https://biancammoreno.github.io/">Bianca Marin Moreno</a>, Khaled Eldowa, Margaux Brégère, Pierre Gaillard, and Nadia Oudjane. ICML, 2025. 
+              <a href="https://hal.science/hal-05059067/document"  class="article">Online Episodic Convex Reinforcement Learning.</a> <a href="https://biancammoreno.github.io/" class="author-link">Bianca Marin Moreno</a>, Khaled Eldowa, <a href="https://margauxbregere.github.io/" class="author-link">Margaux Brégère</a>, Pierre Gaillard, and <a href="https://fime-lab.org/oudjane-nadia/" class="author-link">Nadia Oudjane</a>. ICML, 2025. 
             </li>
             <li>
-              <a href="https://arxiv.org/pdf/2405.19807" class = "article">MetaCURL: Non-stationary Concave Utility Reinforcement Learning.</a> <a href="https://biancammoreno.github.io/">Bianca Marin Moreno</a>,  Margaux Brégère, Pierre Gaillard, and Nadia Oudjane. NeurIPS, 2024.
+              <a href="https://arxiv.org/pdf/2405.19807" class = "article">MetaCURL: Non-stationary Concave Utility Reinforcement Learning.</a> <a href="https://biancammoreno.github.io/" class="author-link">Bianca Marin Moreno</a>,  <a href="https://margauxbregere.github.io/" class="author-link">Margaux Brégère</a>, Pierre Gaillard, and <a href="https://fime-lab.org/oudjane-nadia/" class="author-link">Nadia Oudjane</a>. NeurIPS, 2024.
             </li>
-            <li><a href="https://arxiv.org/abs/2311.18346" class="article">Efficient Model-Based Concave Utility Reinforcement Learning through Greedy Mirror Descent.</a> <a href="https://biancammoreno.github.io/">Bianca Marin Moreno</a>, Margaux Brégère, Pierre Gaillard, Nadia Oudjane. AISTATS, 2024. 
-            </li>
-          </ul>
-
-          <h5>Counterfactual and off-policy learning</h5>
-          <ul>
-            <li>
-              <a href="https://openreview.net/pdf?id=fC4bh1PmZr" class="article">Counterfactual Learning of Stochastic Policies with Continuous Actions.</a> Houssam Zenati, Alberto Bietti, Matthieu Martin, Eustache Diemert, Pierre Gaillard, Julien Mairal. TMLR, 2025
-            </li>
-            <li>
-              <a href="https://arxiv.org/pdf/2302.12120.pdf" class="article">Sequential Counterfactual Risk Minimization.</a> Houssam Zenati, Eustache Diemert, Matthieu Martin, Julien Mairal, Pierre Gaillard. ICML, 2023. 
+            <li><a href="https://arxiv.org/abs/2311.18346" class="article">Efficient Model-Based Concave Utility Reinforcement Learning through Greedy Mirror Descent.</a> <a href="https://biancammoreno.github.io/" class="author-link">Bianca Marin Moreno</a>, <a href="https://margauxbregere.github.io/" class="author-link">Margaux Brégère</a>, Pierre Gaillard, <a href="https://fime-lab.org/oudjane-nadia/" class="author-link">Nadia Oudjane</a>. AISTATS, 2024. 
             </li>
           </ul>
 
-          <h5>Forecasting and applications</h5>
+          <h4>Counterfactual and off-policy learning</h4>
           <ul>
-            <li><a href="https://cnrs.hal.science/hal-03972660" class="article">(Online) Convex Optimization for Demand-Side Management: Application to Thermostatically Controlled Loads.</a> <a href="https://biancammoreno.github.io/">Bianca Marin Moreno</a>, Margaux Brégère, Pierre Gaillard, Nadia Oudjane. Journal of Optimization Theory and Applications. Volume 205, article number 43, 2025.</li>
             <li>
-              <a href="https://arxiv.org/pdf/2402.05145v1.pdf" class = "article">Online Convex Optimization for Survival Analysis: An Adaptive and Stochastic Approach.</a> Camila Fernandez, Pierre Gaillard, Joseph de Vilmarest, and Olivier Wintenberger. Statistical Papers. Volume 66, article number 86, 2025.
+              <a href="https://openreview.net/pdf?id=fC4bh1PmZr" class="article">Counterfactual Learning of Stochastic Policies with Continuous Actions.</a> <a href="https://houssamzenati.github.io/" class="author-link">Houssam Zenati</a>, <a href="https://alberto.bietti.me/" class="author-link">Alberto Bietti</a>, Matthieu Martin, Eustache Diemert, Pierre Gaillard, <a href="https://lear.inrialpes.fr/people/mairal/" class="author-link">Julien Mairal</a>. TMLR, 2025
+            </li>
+            <li>
+              <a href="https://arxiv.org/pdf/2302.12120.pdf" class="article">Sequential Counterfactual Risk Minimization.</a> <a href="https://houssamzenati.github.io/" class="author-link">Houssam Zenati</a>, Eustache Diemert, Matthieu Martin, <a href="https://lear.inrialpes.fr/people/mairal/" class="author-link">Julien Mairal</a>, Pierre Gaillard. ICML, 2023. 
+            </li>
+          </ul>
+
+          <h4>Forecasting and applications</h4>
+          <ul>
+            <li><a href="https://cnrs.hal.science/hal-03972660" class="article">(Online) Convex Optimization for Demand-Side Management: Application to Thermostatically Controlled Loads.</a> <a href="https://biancammoreno.github.io/" class="author-link">Bianca Marin Moreno</a>, <a href="https://margauxbregere.github.io/" class="author-link">Margaux Brégère</a>, Pierre Gaillard, <a href="https://fime-lab.org/oudjane-nadia/" class="author-link">Nadia Oudjane</a>. Journal of Optimization Theory and Applications. Volume 205, article number 43, 2025.</li>
+            <li>
+              <a href="https://arxiv.org/pdf/2402.05145v1.pdf" class = "article">Online Convex Optimization for Survival Analysis: An Adaptive and Stochastic Approach.</a> Camila Fernandez, Pierre Gaillard, Joseph de Vilmarest, and <a href="http://wintenberger.fr/index.html" class="author-link">Olivier Wintenberger</a>. Statistical Papers. Volume 66, article number 86, 2025.
           </li>
             <li>
               <a href="https://link.springer.com/article/10.1007/s41060-024-00642-6", class="article">Aggregation methods and comparative study in time-to-event analysis models.</a> Camila Fernandez, Chung Shue Chen, Pierre Gaillard, and Alonso Silva. International Journal of Data Science and Analytics. 2024.
             </li>
             <li>
-          <a href="http://www.sciencedirect.com/science/article/pii/S0169207015001545" class="article">Additive models and robust aggregation for GEFCom2014 probabilistic electric load and electricity price forecasting.</a> <a href = "index.html">Pierre Gaillard</a>, Yannig Goude, and Raphaël Nedellec. International Journal of Forecasting, Volume 32, Issue 3, pages 1038–1050, 2016.</li>
+          <a href="http://www.sciencedirect.com/science/article/pii/S0169207015001545" class="article">Additive models and robust aggregation for GEFCom2014 probabilistic electric load and electricity price forecasting.</a> <a href = "index.html" class="author-link">Pierre Gaillard</a>, Yannig Goude, and Raphaël Nedellec. International Journal of Forecasting, Volume 32, Issue 3, pages 1038–1050, 2016.</li>
             <li>
-      <a href="http://www.springer.com/us/book/9783319187310" class="article">Forecasting electricity consumption by aggregating experts; how to design a good set of experts.</a> <a href = "index.html">Pierre Gaillard</a>, Yannig Goude. In A. Antoniadis et al. editors, Modeling and Stochastic Learning for Forecasting in High Dimensions, volume 217 of Lecture Notes in Statistics, pages 95&ndash;115. Springer, 2015.</li>
-            <li><a href="http://arxiv.org/abs/1207.1965" class="article">Forecasting electricity consumption by aggregating specialized experts.</a> Marie Devaine, <a href="index.html">Pierre Gaillard</a>, Yannig Goude, and <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz.</a> Machine Learning, Volume 90, Issue 2, pages 231&ndash;260, 2013.</li>
+      <a href="http://www.springer.com/us/book/9783319187310" class="article">Forecasting electricity consumption by aggregating experts; how to design a good set of experts.</a> <a href = "index.html" class="author-link">Pierre Gaillard</a>, Yannig Goude. In A. Antoniadis et al. editors, Modeling and Stochastic Learning for Forecasting in High Dimensions, volume 217 of Lecture Notes in Statistics, pages 95&ndash;115. Springer, 2015.</li>
+            <li><a href="http://arxiv.org/abs/1207.1965" class="article">Forecasting electricity consumption by aggregating specialized experts.</a> Marie Devaine, <a href="index.html" class="author-link">Pierre Gaillard</a>, Yannig Goude, and <a href="http://stoltz.perso.math.cnrs.fr/" class="author-link">Gilles Stoltz.</a> Machine Learning, Volume 90, Issue 2, pages 231&ndash;260, 2013.</li>
           </ul>
 
-          <h5>PhD thesis</h5>
+          <h4>PhD thesis</h4>
           <ul>
             <li>
     <a href="https://theses.hal.science/tel-01250027/document/" class="article">Contributions to online robust aggregation: work on the approximation error and on probabilistic
@@ -229,7 +253,7 @@
           <h3>Software</h3>
 <ul>
   <li>
-    <a href="opera.html" class="article">Opera: Online Prediction by ExpeRt Aggregation.</a> <a href = "index.html">Pierre Gaillard</a>, Yannig Goude. R package, 2016.  <br />
+    <a href="opera.html" class="article">Opera: Online Prediction by ExpeRt Aggregation.</a> <a href = "index.html" class="author-link">Pierre Gaillard</a>, Yannig Goude. R package, 2016.  <br />
     <ul class="info">
       <li><a onclick="toggle_visibility('abstract-opera');"><span id="show-abstract-opera">Show</span><span id="hide-abstract-opera" style="display:none;">Hide</span> abstract</a>
       </li>
@@ -254,39 +278,39 @@
 </ul>
 
 <h3>PhD Students and postdocs</h3>
-PhD students currently supervised
+<h4>PhD students currently supervised</h4>
 <ul>
-  <li>Pierre Boudart, co-advised with Alessandro Rudi (Inria), 2023-...
+  <li>Pierre Boudart, co-advised with <a href="https://www.di.ens.fr/~rudi/" class="author-link">Alessandro Rudi</a> (Inria), 2023-...
   <li>
-    Paul Liautaud, co-advised with Olivier Wintenberger, 2022-...
+    Paul Liautaud, co-advised with <a href="http://wintenberger.fr/index.html" class="author-link">Olivier Wintenberger</a>, 2022-...
   </li>
 </ul>
 
-Former PhD students and postdocs
+<h4>Former PhD students and postdocs</h4>
 <ul>  
   <li>
-    <a href="https://jlnzhou.github.io/">Julien Zhou</a>, industrial PhD with Criteo, co-advised with Julyan Arbel (Inria) and Thibaud Rahier (Criteo), 2022-2026
+    <a href="https://jlnzhou.github.io/" class="author-link">Julien Zhou</a>, industrial PhD with Criteo, co-advised with <a href="https://www.julyanarbel.com/" class="author-link">Julyan Arbel</a> (Inria) and Thibaud Rahier (Criteo), 2022-2026
   </li>
   <li>
-    <a href="https://biancammoreno.github.io/">Bianca Marin Moreno</a>, industrial PhD with EDF R&D, co-advised with Nadia Oudjane (EDF R&D) and Margaux Brégère (EDF R&D), 2022-2025.  Now research scientist at CFM.  
+    <a href="https://biancammoreno.github.io/" class="author-link">Bianca Marin Moreno</a>, industrial PhD with EDF R&D, co-advised with <a href="https://fime-lab.org/oudjane-nadia/" class="author-link">Nadia Oudjane</a> (EDF R&D) and <a href="https://margauxbregere.github.io/" class="author-link">Margaux Brégère</a> (EDF R&D), 2022-2025.  Now research scientist at CFM.  
   </li>
   <li>
-    Camila Fernandez, industrial PhD with Nokia Bell labs, co-advised with Olivier Wintenberger, Chung Shue Chen (Nokia Bell labs), and Alonso Silva (Nokia Bell Labs). 2020-2024.
+    Camila Fernandez, industrial PhD with Nokia Bell labs, co-advised with <a href="http://wintenberger.fr/index.html" class="author-link">Olivier Wintenberger</a>, Chung Shue Chen (Nokia Bell labs), and Alonso Silva (Nokia Bell Labs). 2020-2024.
   </li>
   <li>
-    <a href="https://houssamzenati.github.io/">Houssam Zenati</a>, industrial PhD with Criteo, co-advised with Julien Mairal and Eustach Ziemert (Criteo). 2019-2023. Now postdoc at Inria Paris-Saclay. 
+    <a href="https://houssamzenati.github.io/" class="author-link">Houssam Zenati</a>, industrial PhD with Criteo, co-advised with <a href="https://lear.inrialpes.fr/people/mairal/" class="author-link">Julien Mairal</a> and Eustach Ziemert (Criteo). 2019-2023. Now postdoc at Inria Paris-Saclay. 
   </li>
   <li>
-      Rémi Jézéquel, co-advised with <a href="https://www.di.ens.fr/~rudi/">Alessandro Rudi</a>, 2019-2023. Now research scientist at CFM. 
+      Rémi Jézéquel, co-advised with <a href="https://www.di.ens.fr/~rudi/" class="author-link">Alessandro Rudi</a>, 2019-2023. Now research scientist at CFM. 
   </li>
   <li>
-      <a href="https://remydegenne.github.io/">Rémy Degenne</a>, postdoc, january-august 2020. Now researcher at Inria Lille. 
+      <a href="https://remydegenne.github.io/" class="author-link">Rémy Degenne</a>, postdoc, january-august 2020. Now researcher at Inria Lille. 
   </li>
   <li>
-      <a href="https://raphael-berthier.github.io/">Raphaël Berthier</a>, co-advised with <a href="https://www.di.ens.fr/~fbach/">Francis Bach</a>, 2018-2021. 
+      <a href="https://raphael-berthier.github.io/" class="author-link">Raphaël Berthier</a>, co-advised with <a href="https://www.di.ens.fr/~fbach/" class="author-link">Francis Bach</a>, 2018-2021. 
   </li>
   <li>
-      Margaux Brégère, industrial PhD with EDF R&D, co-advised with <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz</a> and Yannig Goude (EDF R&D), 2017-2020. Now researcher at EDF R&D. 
+      <a href="https://margauxbregere.github.io/" class="author-link">Margaux Brégère</a>, industrial PhD with EDF R&D, co-advised with <a href="http://stoltz.perso.math.cnrs.fr/" class="author-link">Gilles Stoltz</a> and Yannig Goude (EDF R&D), 2017-2020. Now researcher at EDF R&D. 
   </li> 
 </ul>
 
@@ -294,7 +318,7 @@ Former PhD students and postdocs
 Here, you can find some reports I wrote during my studies.
 <ul>
   <li>
-    <a href="./doc/Ga-master-thesis.pdf" class="article">Prévision de la consommation électrique (à court terme) par agrégation séquentielle d'experts spécialisés</a>, 2011. Under the supervision of Yannig Goude and <a href="http://stoltz.perso.math.cnrs.fr/">Gilles Stoltz</a>
+    <a href="./doc/Ga-master-thesis.pdf" class="article">Prévision de la consommation électrique (à court terme) par agrégation séquentielle d'experts spécialisés</a>, 2011. Under the supervision of Yannig Goude and <a href="http://stoltz.perso.math.cnrs.fr/" class="author-link">Gilles Stoltz</a>
     <br />
     <ul class="info">
       <li>
@@ -306,11 +330,11 @@ Here, you can find some reports I wrote during my studies.
     </ul>
   </li>
   <li>
-    <a href="./doc/Ga10-report.pdf" class="article">Invert sparse matrices with gaussian belief propagation algorithm</a>, 2010. Under the supervision of <a href="http://www.mit.edu/~devavrat/">Devavrat Shah</a>
+    <a href="./doc/Ga10-report.pdf" class="article">Invert sparse matrices with gaussian belief propagation algorithm</a>, 2010. Under the supervision of <a href="http://www.mit.edu/~devavrat/" class="author-link">Devavrat Shah</a>
   </li>
   <li>   
     <a href="./doc/Ga09-report.pdf" class="article">
-    The Lasso, or how to choose among a large set of variables with few observations</a>, 2009. <a href = "index.html">Pierre Gaillard</a> and Anisse Ismaili. Under the supervision of <a href="http://www.di.ens.fr/~arlot/">Sylvain Arlot</a>
+    The Lasso, or how to choose among a large set of variables with few observations</a>, 2009. <a href = "index.html" class="author-link">Pierre Gaillard</a> and Anisse Ismaili. Under the supervision of <a href="http://www.di.ens.fr/~arlot/" class="author-link">Sylvain Arlot</a>
   </li>
 </ul>
 
@@ -348,25 +372,7 @@ Here, you can find some reports I wrote during my studies.
   <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
-  <!-- Navbar include -->
-  <script>
-  fetch('header.html')
-    .then(function(r) {
-      if (!r.ok) throw new Error('header.html not found (HTTP ' + r.status + ')');
-      return r.text();
-    })
-    .then(function(html) {
-      document.getElementById('navbar-placeholder').innerHTML = html;
-      document.getElementById('navbar-placeholder').classList.add('loaded');
-      var page = window.location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('#navbar-placeholder .nav a').forEach(function(a) {
-        if (a.getAttribute('href') === page) a.parentElement.classList.add('active');
-      });
-    })
-    .catch(function(err) {
-      console.error('Navbar load failed:', err);
-    });
-  </script>
+
 </body>
 
 </html>

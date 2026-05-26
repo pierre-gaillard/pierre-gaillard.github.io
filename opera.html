@@ -13,11 +13,6 @@
 <!-- Custom CSS -->
 <link href="home/css/simple-sidebar.css" rel="stylesheet">
 <link href="home/css/custom.css" rel="stylesheet">
-  <link rel="preload" href="header.html" as="fetch" crossorigin="anonymous">
-  <style>
-  #navbar-placeholder { opacity: 0; transition: opacity 0.15s ease; }
-  #navbar-placeholder.loaded { opacity: 1; }
-  </style>
   <link rel="shortcut icon" type="image/png" href="home/img/pierre_gaillard.png" />
 </head>
 <body>
@@ -26,8 +21,32 @@
 <div class="row">
 
 <!-- header -- sidebar -->
-    <!-- Navbar loaded dynamically from header.html -->
-    <div id="navbar-placeholder"></div>
+    <div class="col-sm-3 col-lg-2">
+  <nav class="navbar navbar-default navbar-fixed-side">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Pierre Gaillard</a>
+      </div>
+      <div class="navbar-collapse collapse" id="myNav">
+        <p class="text-center hidden-xs">
+          <a href="index.html"><img src="home/img/pierre_gaillard.png" alt="Pierre Gaillard" class="sidebar-photo" width="150" height="150"/></a>
+        </p>
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">About me</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="resume.html">Resume</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
 
 <div class="col-sm-9 col-lg-10" id="content">
 
@@ -301,25 +320,6 @@ tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
 <script type="text/javascript" async
 src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
-  <!-- Navbar include -->
-  <script>
-  fetch('header.html')
-    .then(function(r) {
-      if (!r.ok) throw new Error('header.html not found (HTTP ' + r.status + ')');
-      return r.text();
-    })
-    .then(function(html) {
-      document.getElementById('navbar-placeholder').innerHTML = html;
-      document.getElementById('navbar-placeholder').classList.add('loaded');
-      var page = window.location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('#navbar-placeholder .nav a').forEach(function(a) {
-        if (a.getAttribute('href') === page) a.parentElement.classList.add('active');
-      });
-    })
-    .catch(function(err) {
-      console.error('Navbar load failed:', err);
-    });
-  </script>
 </body>
 
 </html>

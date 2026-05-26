@@ -14,19 +14,38 @@
   <link href="home/css/simple-sidebar.css" rel="stylesheet">
   <link href="home/css/custom.css" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="home/img/pierre_gaillard.png" />
-  <link rel="preload" href="header.html" as="fetch" crossorigin="anonymous">
-  <style>
-  #navbar-placeholder { opacity: 0; transition: opacity 0.15s ease; }
-  #navbar-placeholder.loaded { opacity: 1; }
-  </style>
 </head>
 
 <body>
 <div class="container-fluid">
   <div class="row">
     <!-- header sidebar -->
-    <!-- Navbar loaded dynamically from header.html -->
-    <div id="navbar-placeholder"></div>
+    <div class="col-sm-3 col-lg-2">
+  <nav class="navbar navbar-default navbar-fixed-side">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Pierre Gaillard</a>
+      </div>
+      <div class="navbar-collapse collapse" id="myNav">
+        <p class="text-center hidden-xs">
+          <a href="index.html"><img src="home/img/pierre_gaillard.png" alt="Pierre Gaillard" class="sidebar-photo" width="150" height="150"/></a>
+        </p>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">About me</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="resume.html">Resume</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
     <div class="col-sm-9 col-lg-10" id="content">
       
       <!-- your page content -->
@@ -73,11 +92,6 @@
     </div>
   </div>
 
-  <footer class="col-sm-9 col-lg-10 col-sm-offset-3 col-lg-offset-2 site-footer">
-    &copy; Pierre Gaillard &nbsp;&middot;&nbsp;
-    <a href="mailto:pierre.gaillard@inria.fr">pierre.gaillard@inria.fr</a> &nbsp;&middot;&nbsp;
-    <a href="https://github.com/Dralliag">GitHub</a>
-  </footer>
   <!-- js scripts here
   // note jquery tag has to go before boostrap -->
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -92,25 +106,6 @@
   });
   </script>
   <script src="https://use.fontawesome.com/9f2e7c29fc.js"></script>
-  <!-- Navbar include -->
-  <script>
-  fetch('header.html')
-    .then(function(r) {
-      if (!r.ok) throw new Error('header.html not found (HTTP ' + r.status + ')');
-      return r.text();
-    })
-    .then(function(html) {
-      document.getElementById('navbar-placeholder').innerHTML = html;
-      document.getElementById('navbar-placeholder').classList.add('loaded');
-      var page = window.location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('#navbar-placeholder .nav a').forEach(function(a) {
-        if (a.getAttribute('href') === page) a.parentElement.classList.add('active');
-      });
-    })
-    .catch(function(err) {
-      console.error('Navbar load failed:', err);
-    });
-  </script>
 </body>
 
 </html>
